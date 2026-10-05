@@ -1,0 +1,24 @@
+==================================================
+           KẾT QUẢ BENCHMARK: numbers_10gb.txt
+==================================================
+Dung lượng dữ liệu:     10GB
+HDFS Path:              /user/hdoop/prime/input/numbers_10gb.txt
+Thời gian MapReduce:    6688 giây (09:51:21 -> 11:42:49)
+Thời gian Spark:         1744 giây (11:43:07 -> 12:12:11)
+Spark nhanh hơn (Speedup): 3.83x
+
+--- OUTPUT MAPREDUCE ---
+==================================================
+Tổng số:            1558659920
+Số nguyên tố:       122357036
+Số không nguyên tố: 1436302884
+==================================================
+
+--- OUTPUT SPARK ---
+Tổng số:            1558659920
+Số nguyên tố:       122357036
+Số không nguyên tố: 1436302884
+
+--- KIỂM TRA ĐỐI CHIẾU SỐ LƯỢNG NGUYÊN TỐ ---
+✓ KẾT QUẢ KHỚP TUYỆT ĐỐI: Cả 2 đều đếm được 122357036 số nguyên tố.
+==================================================

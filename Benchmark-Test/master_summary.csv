@@ -1,0 +1,4 @@
+dataset,size_mb,mr_runtime_sec,spark_runtime_sec,speedup,mr_primes,spark_primes,status
+500MB,500,300,114,2.63,5973435,5973435,MATCHED
+1GB,1024,614,198,3.10,12240116,12240116,MATCHED
+10GB,10240,6688,1744,3.83,122357036,122357036,MATCHED

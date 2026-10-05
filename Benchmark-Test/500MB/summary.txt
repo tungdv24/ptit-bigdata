@@ -1,0 +1,24 @@
+==================================================
+           KẾT QUẢ BENCHMARK: numbers_500mb.txt
+==================================================
+Dung lượng dữ liệu:     500MB
+HDFS Path:              /user/hdoop/prime/input/numbers_500mb.txt
+Thời gian MapReduce:    300 giây (09:28:40 -> 09:33:40)
+Thời gian Spark:         114 giây (09:33:59 -> 09:35:53)
+Spark nhanh hơn (Speedup): 2.63x
+
+--- OUTPUT MAPREDUCE ---
+==================================================
+Tổng số:            76106520
+Số nguyên tố:       5973435
+Số không nguyên tố: 70133085
+==================================================
+
+--- OUTPUT SPARK ---
+Tổng số:            76106520
+Số nguyên tố:       5973435
+Số không nguyên tố: 70133085
+
+--- KIỂM TRA ĐỐI CHIẾU SỐ LƯỢNG NGUYÊN TỐ ---
+✓ KẾT QUẢ KHỚP TUYỆT ĐỐI: Cả 2 đều đếm được 5973435 số nguyên tố.
+==================================================

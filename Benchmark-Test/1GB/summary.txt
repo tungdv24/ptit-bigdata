@@ -1,0 +1,24 @@
+==================================================
+           KẾT QUẢ BENCHMARK: numbers_1gb.txt
+==================================================
+Dung lượng dữ liệu:     1GB
+HDFS Path:              /user/hdoop/prime/input/numbers_1gb.txt
+Thời gian MapReduce:    614 giây (09:36:42 -> 09:46:56)
+Thời gian Spark:         198 giây (09:47:14 -> 09:50:32)
+Spark nhanh hơn (Speedup): 3.10x
+
+--- OUTPUT MAPREDUCE ---
+==================================================
+Tổng số:            155866020
+Số nguyên tố:       12240116
+Số không nguyên tố: 143625904
+==================================================
+
+--- OUTPUT SPARK ---
+Tổng số:            155866020
+Số nguyên tố:       12240116
+Số không nguyên tố: 143625904
+
+--- KIỂM TRA ĐỐI CHIẾU SỐ LƯỢNG NGUYÊN TỐ ---
+✓ KẾT QUẢ KHỚP TUYỆT ĐỐI: Cả 2 đều đếm được 12240116 số nguyên tố.
+==================================================

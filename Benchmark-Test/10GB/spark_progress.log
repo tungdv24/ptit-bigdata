@@ -1,0 +1,914 @@
+26/10/05 11:43:10 WARN Utils: Your hostname, tungdv-Hadoop resolves to a loopback address: 127.0.1.1; using 192.168.10.53 instead (on interface eth0)
+26/10/05 11:43:10 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/05 11:43:11 INFO SparkContext: Running Spark version 3.5.9
+26/10/05 11:43:11 INFO SparkContext: OS info Linux, 6.8.0-136-generic, amd64
+26/10/05 11:43:11 INFO SparkContext: Java version 11.0.32.1
+26/10/05 11:43:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/05 11:43:12 INFO ResourceUtils: ==============================================================
+26/10/05 11:43:12 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/05 11:43:12 INFO ResourceUtils: ==============================================================
+26/10/05 11:43:12 INFO SparkContext: Submitted application: PrimeCounter
+26/10/05 11:43:12 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 1024, script: , vendor: , cores -> name: cores, amount: 4, script: , vendor: , memory -> name: memory, amount: 5120, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/05 11:43:12 INFO ResourceProfile: Limiting resource is cpus at 4 tasks per executor
+26/10/05 11:43:12 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/05 11:43:12 INFO SecurityManager: Changing view acls to: hdoop
+26/10/05 11:43:12 INFO SecurityManager: Changing modify acls to: hdoop
+26/10/05 11:43:12 INFO SecurityManager: Changing view acls groups to: 
+26/10/05 11:43:12 INFO SecurityManager: Changing modify acls groups to: 
+26/10/05 11:43:12 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: hdoop; groups with view permissions: EMPTY; users with modify permissions: hdoop; groups with modify permissions: EMPTY
+26/10/05 11:43:12 INFO Utils: Successfully started service 'sparkDriver' on port 41567.
+26/10/05 11:43:12 INFO SparkEnv: Registering MapOutputTracker
+26/10/05 11:43:12 INFO SparkEnv: Registering BlockManagerMaster
+26/10/05 11:43:12 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/05 11:43:12 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/05 11:43:12 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/05 11:43:12 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-8da2759b-076e-4ee2-9c93-75a9567e8271
+26/10/05 11:43:12 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/10/05 11:43:12 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/05 11:43:13 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/05 11:43:13 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/05 11:43:13 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+26/10/05 11:43:14 INFO Configuration: resource-types.xml not found
+26/10/05 11:43:14 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+26/10/05 11:43:14 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+26/10/05 11:43:14 INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+26/10/05 11:43:14 INFO Client: Setting up container launch context for our AM
+26/10/05 11:43:14 INFO Client: Setting up the launch environment for our AM container
+26/10/05 11:43:14 INFO Client: Preparing resources for our AM container
+26/10/05 11:43:14 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+26/10/05 11:43:20 INFO Client: Uploading resource file:/tmp/spark-eb61a2a4-0e8a-4349-881a-12faf4a6b47c/__spark_libs__4599052357936647328.zip -> hdfs://localhost:9000/user/hdoop/.sparkStaging/application_1791165466837_0008/__spark_libs__4599052357936647328.zip
+26/10/05 11:43:21 INFO Client: Uploading resource file:/home/hdoop/spark-3.5.9-bin-hadoop3/python/lib/pyspark.zip -> hdfs://localhost:9000/user/hdoop/.sparkStaging/application_1791165466837_0008/pyspark.zip
+26/10/05 11:43:21 INFO Client: Uploading resource file:/home/hdoop/spark-3.5.9-bin-hadoop3/python/lib/py4j-0.10.9.7-src.zip -> hdfs://localhost:9000/user/hdoop/.sparkStaging/application_1791165466837_0008/py4j-0.10.9.7-src.zip
+26/10/05 11:43:22 INFO Client: Uploading resource file:/tmp/spark-eb61a2a4-0e8a-4349-881a-12faf4a6b47c/__spark_conf__10232275896381445661.zip -> hdfs://localhost:9000/user/hdoop/.sparkStaging/application_1791165466837_0008/__spark_conf__.zip
+26/10/05 11:43:22 INFO SecurityManager: Changing view acls to: hdoop
+26/10/05 11:43:22 INFO SecurityManager: Changing modify acls to: hdoop
+26/10/05 11:43:22 INFO SecurityManager: Changing view acls groups to: 
+26/10/05 11:43:22 INFO SecurityManager: Changing modify acls groups to: 
+26/10/05 11:43:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: hdoop; groups with view permissions: EMPTY; users with modify permissions: hdoop; groups with modify permissions: EMPTY
+26/10/05 11:43:22 INFO Client: Submitting application application_1791165466837_0008 to ResourceManager
+26/10/05 11:43:22 INFO YarnClientImpl: Submitted application application_1791165466837_0008
+26/10/05 11:43:23 INFO Client: Application report for application_1791165466837_0008 (state: ACCEPTED)
+26/10/05 11:43:23 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1791175402389
+	 final status: UNDEFINED
+	 tracking URL: http://tungdv-Hadoop:8088/proxy/application_1791165466837_0008/
+	 user: hdoop
+26/10/05 11:43:33 INFO Client: Application report for application_1791165466837_0008 (state: RUNNING)
+26/10/05 11:43:33 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.10.53
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1791175402389
+	 final status: UNDEFINED
+	 tracking URL: http://tungdv-Hadoop:8088/proxy/application_1791165466837_0008/
+	 user: hdoop
+26/10/05 11:43:33 INFO YarnClientSchedulerBackend: Application application_1791165466837_0008 has started running.
+26/10/05 11:43:33 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44479.
+26/10/05 11:43:33 INFO NettyBlockTransferService: Server created on 192.168.10.53:44479
+26/10/05 11:43:33 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/05 11:43:33 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.10.53, 44479, None)
+26/10/05 11:43:33 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.10.53:44479 with 1048.8 MiB RAM, BlockManagerId(driver, 192.168.10.53, 44479, None)
+26/10/05 11:43:33 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.10.53, 44479, None)
+26/10/05 11:43:33 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.10.53, 44479, None)
+26/10/05 11:43:33 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> tungdv-Hadoop, PROXY_URI_BASES -> http://tungdv-Hadoop:8088/proxy/application_1791165466837_0008), /proxy/application_1791165466837_0008
+26/10/05 11:43:33 INFO SingleEventLogFileWriter: Logging events to hdfs://localhost:9000/spark-logs/application_1791165466837_0008.inprogress
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /jobs: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /jobs/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /jobs/job: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /stages: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /stages/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /stages/stage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /stages/pool: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /storage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /storage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /environment: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /environment/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /executors: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /executors/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /executors/heapHistogram: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /executors/heapHistogram/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /static: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /api: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 11:43:34 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+26/10/05 11:43:39 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.10.53:51118) with ID 1,  ResourceProfileId 0
+26/10/05 11:43:39 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/10/05 11:43:39 INFO BlockManagerMasterEndpoint: Registering block manager tungdv-Hadoop:39785 with 2.8 GiB RAM, BlockManagerId(1, tungdv-Hadoop, 39785, None)
+Đang đọc input: /user/hdoop/prime/input/numbers_10gb.txt
+26/10/05 11:43:40 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 308.4 KiB, free 1048.5 MiB)
+26/10/05 11:43:40 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 52.5 KiB, free 1048.4 MiB)
+26/10/05 11:43:40 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.10.53:44479 (size: 52.5 KiB, free: 1048.7 MiB)
+26/10/05 11:43:40 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+26/10/05 11:43:40 INFO FileInputFormat: Total input files to process : 1
+26/10/05 11:43:40 INFO NetworkTopology: Adding a new node: /default-rack/127.0.0.1:9866
+26/10/05 11:43:40 INFO SparkContext: Starting job: count at /home/hdoop/test-2/prime_spark.py:54
+26/10/05 11:43:40 INFO DAGScheduler: Got job 0 (count at /home/hdoop/test-2/prime_spark.py:54) with 80 output partitions
+26/10/05 11:43:40 INFO DAGScheduler: Final stage: ResultStage 0 (count at /home/hdoop/test-2/prime_spark.py:54)
+26/10/05 11:43:40 INFO DAGScheduler: Parents of final stage: List()
+26/10/05 11:43:40 INFO DAGScheduler: Missing parents: List()
+26/10/05 11:43:40 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[3] at count at /home/hdoop/test-2/prime_spark.py:54), which has no missing parents
+26/10/05 11:43:41 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KiB, free 1048.4 MiB)
+26/10/05 11:43:41 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.4 KiB, free 1048.4 MiB)
+26/10/05 11:43:41 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.10.53:44479 (size: 6.4 KiB, free: 1048.7 MiB)
+26/10/05 11:43:41 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1611
+26/10/05 11:43:41 INFO DAGScheduler: Submitting 80 missing tasks from ResultStage 0 (PythonRDD[3] at count at /home/hdoop/test-2/prime_spark.py:54) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+26/10/05 11:43:41 INFO YarnScheduler: Adding task set 0.0 with 80 tasks resource profile 0
+26/10/05 11:43:41 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (tungdv-Hadoop, executor 1, partition 0, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:43:41 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (tungdv-Hadoop, executor 1, partition 1, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:43:41 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (tungdv-Hadoop, executor 1, partition 2, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:43:41 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (tungdv-Hadoop, executor 1, partition 3, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:43:41 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on tungdv-Hadoop:39785 (size: 6.4 KiB, free: 2.8 GiB)
+26/10/05 11:43:41 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on tungdv-Hadoop:39785 (size: 52.5 KiB, free: 2.8 GiB)
+26/10/05 11:43:56 INFO BlockManagerInfo: Added rdd_2_1 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 11:43:56 INFO BlockManagerInfo: Added rdd_2_3 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 11:43:56 INFO BlockManagerInfo: Added rdd_2_2 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.6 GiB)
+26/10/05 11:43:56 INFO BlockManagerInfo: Added rdd_2_0 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.5 GiB)
+26/10/05 11:43:58 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (tungdv-Hadoop, executor 1, partition 4, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:43:58 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 17060 ms on tungdv-Hadoop (executor 1) (1/80)
+26/10/05 11:43:58 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 59239
+26/10/05 11:43:58 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (tungdv-Hadoop, executor 1, partition 5, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:43:58 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 17139 ms on tungdv-Hadoop (executor 1) (2/80)
+26/10/05 11:43:58 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (tungdv-Hadoop, executor 1, partition 6, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:43:58 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 17200 ms on tungdv-Hadoop (executor 1) (3/80)
+26/10/05 11:43:58 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (tungdv-Hadoop, executor 1, partition 7, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:43:58 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 17302 ms on tungdv-Hadoop (executor 1) (4/80)
+26/10/05 11:44:10 INFO BlockManagerInfo: Added rdd_2_5 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.4 GiB)
+26/10/05 11:44:10 INFO BlockManagerInfo: Added rdd_2_4 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.3 GiB)
+26/10/05 11:44:10 INFO BlockManagerInfo: Added rdd_2_6 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 11:44:10 INFO BlockManagerInfo: Added rdd_2_7 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 11:44:12 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (tungdv-Hadoop, executor 1, partition 8, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:12 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 14447 ms on tungdv-Hadoop (executor 1) (5/80)
+26/10/05 11:44:12 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (tungdv-Hadoop, executor 1, partition 9, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:12 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 14668 ms on tungdv-Hadoop (executor 1) (6/80)
+26/10/05 11:44:12 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (tungdv-Hadoop, executor 1, partition 10, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:12 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 14535 ms on tungdv-Hadoop (executor 1) (7/80)
+26/10/05 11:44:13 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (tungdv-Hadoop, executor 1, partition 11, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:13 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 14634 ms on tungdv-Hadoop (executor 1) (8/80)
+26/10/05 11:44:26 INFO BlockManagerInfo: Added rdd_2_8 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2.1 GiB)
+26/10/05 11:44:27 INFO BlockManagerInfo: Added rdd_2_10 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 2043.3 MiB)
+26/10/05 11:44:27 INFO BlockManagerInfo: Added rdd_2_9 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1958.4 MiB)
+26/10/05 11:44:27 INFO BlockManagerInfo: Added rdd_2_11 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1873.5 MiB)
+26/10/05 11:44:29 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (tungdv-Hadoop, executor 1, partition 12, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:29 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 16307 ms on tungdv-Hadoop (executor 1) (9/80)
+26/10/05 11:44:29 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13) (tungdv-Hadoop, executor 1, partition 13, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:29 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 16257 ms on tungdv-Hadoop (executor 1) (10/80)
+26/10/05 11:44:29 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14) (tungdv-Hadoop, executor 1, partition 14, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:29 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 16301 ms on tungdv-Hadoop (executor 1) (11/80)
+26/10/05 11:44:29 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15) (tungdv-Hadoop, executor 1, partition 15, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:29 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 16257 ms on tungdv-Hadoop (executor 1) (12/80)
+26/10/05 11:44:41 INFO BlockManagerInfo: Added rdd_2_12 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1788.7 MiB)
+26/10/05 11:44:41 INFO BlockManagerInfo: Added rdd_2_14 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1703.8 MiB)
+26/10/05 11:44:41 INFO BlockManagerInfo: Added rdd_2_13 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1618.9 MiB)
+26/10/05 11:44:41 INFO BlockManagerInfo: Added rdd_2_15 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1534.0 MiB)
+26/10/05 11:44:43 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16) (tungdv-Hadoop, executor 1, partition 16, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:43 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 14275 ms on tungdv-Hadoop (executor 1) (13/80)
+26/10/05 11:44:43 INFO TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17) (tungdv-Hadoop, executor 1, partition 17, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:43 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 14497 ms on tungdv-Hadoop (executor 1) (14/80)
+26/10/05 11:44:43 INFO TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18) (tungdv-Hadoop, executor 1, partition 18, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:43 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 14652 ms on tungdv-Hadoop (executor 1) (15/80)
+26/10/05 11:44:43 INFO TaskSetManager: Starting task 19.0 in stage 0.0 (TID 19) (tungdv-Hadoop, executor 1, partition 19, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:43 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 14538 ms on tungdv-Hadoop (executor 1) (16/80)
+26/10/05 11:44:55 INFO BlockManagerInfo: Added rdd_2_16 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1449.2 MiB)
+26/10/05 11:44:56 INFO BlockManagerInfo: Added rdd_2_17 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1364.3 MiB)
+26/10/05 11:44:56 INFO BlockManagerInfo: Added rdd_2_19 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1279.4 MiB)
+26/10/05 11:44:56 INFO BlockManagerInfo: Added rdd_2_18 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1194.6 MiB)
+26/10/05 11:44:57 INFO TaskSetManager: Starting task 20.0 in stage 0.0 (TID 20) (tungdv-Hadoop, executor 1, partition 20, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:57 INFO TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 14590 ms on tungdv-Hadoop (executor 1) (17/80)
+26/10/05 11:44:58 INFO TaskSetManager: Starting task 21.0 in stage 0.0 (TID 21) (tungdv-Hadoop, executor 1, partition 21, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:58 INFO TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 14616 ms on tungdv-Hadoop (executor 1) (18/80)
+26/10/05 11:44:58 INFO TaskSetManager: Starting task 22.0 in stage 0.0 (TID 22) (tungdv-Hadoop, executor 1, partition 22, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:58 INFO TaskSetManager: Finished task 19.0 in stage 0.0 (TID 19) in 14485 ms on tungdv-Hadoop (executor 1) (19/80)
+26/10/05 11:44:58 INFO TaskSetManager: Starting task 23.0 in stage 0.0 (TID 23) (tungdv-Hadoop, executor 1, partition 23, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:44:58 INFO TaskSetManager: Finished task 18.0 in stage 0.0 (TID 18) in 14662 ms on tungdv-Hadoop (executor 1) (20/80)
+26/10/05 11:45:10 INFO BlockManagerInfo: Added rdd_2_20 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1109.7 MiB)
+26/10/05 11:45:10 INFO BlockManagerInfo: Added rdd_2_21 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 1024.8 MiB)
+26/10/05 11:45:10 INFO BlockManagerInfo: Added rdd_2_22 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 940.0 MiB)
+26/10/05 11:45:11 INFO BlockManagerInfo: Added rdd_2_23 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 855.1 MiB)
+26/10/05 11:45:12 INFO TaskSetManager: Starting task 24.0 in stage 0.0 (TID 24) (tungdv-Hadoop, executor 1, partition 24, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:12 INFO TaskSetManager: Finished task 20.0 in stage 0.0 (TID 20) in 14560 ms on tungdv-Hadoop (executor 1) (21/80)
+26/10/05 11:45:12 INFO TaskSetManager: Starting task 25.0 in stage 0.0 (TID 25) (tungdv-Hadoop, executor 1, partition 25, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:12 INFO TaskSetManager: Finished task 21.0 in stage 0.0 (TID 21) in 14317 ms on tungdv-Hadoop (executor 1) (22/80)
+26/10/05 11:45:12 INFO TaskSetManager: Starting task 26.0 in stage 0.0 (TID 26) (tungdv-Hadoop, executor 1, partition 26, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:12 INFO TaskSetManager: Finished task 22.0 in stage 0.0 (TID 22) in 14491 ms on tungdv-Hadoop (executor 1) (23/80)
+26/10/05 11:45:13 INFO TaskSetManager: Starting task 27.0 in stage 0.0 (TID 27) (tungdv-Hadoop, executor 1, partition 27, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:13 INFO TaskSetManager: Finished task 23.0 in stage 0.0 (TID 23) in 14810 ms on tungdv-Hadoop (executor 1) (24/80)
+26/10/05 11:45:25 INFO BlockManagerInfo: Added rdd_2_24 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 770.2 MiB)
+26/10/05 11:45:25 INFO BlockManagerInfo: Added rdd_2_26 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 685.4 MiB)
+26/10/05 11:45:25 INFO BlockManagerInfo: Added rdd_2_25 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 600.5 MiB)
+26/10/05 11:45:25 INFO BlockManagerInfo: Added rdd_2_27 in memory on tungdv-Hadoop:39785 (size: 84.9 MiB, free: 515.6 MiB)
+26/10/05 11:45:27 INFO TaskSetManager: Starting task 28.0 in stage 0.0 (TID 28) (tungdv-Hadoop, executor 1, partition 28, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:27 INFO TaskSetManager: Finished task 25.0 in stage 0.0 (TID 25) in 14822 ms on tungdv-Hadoop (executor 1) (25/80)
+26/10/05 11:45:27 INFO TaskSetManager: Starting task 29.0 in stage 0.0 (TID 29) (tungdv-Hadoop, executor 1, partition 29, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:27 INFO TaskSetManager: Finished task 24.0 in stage 0.0 (TID 24) in 14960 ms on tungdv-Hadoop (executor 1) (26/80)
+26/10/05 11:45:27 INFO TaskSetManager: Starting task 30.0 in stage 0.0 (TID 30) (tungdv-Hadoop, executor 1, partition 30, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:27 INFO TaskSetManager: Finished task 26.0 in stage 0.0 (TID 26) in 14678 ms on tungdv-Hadoop (executor 1) (27/80)
+26/10/05 11:45:28 INFO TaskSetManager: Starting task 31.0 in stage 0.0 (TID 31) (tungdv-Hadoop, executor 1, partition 31, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:28 INFO TaskSetManager: Finished task 27.0 in stage 0.0 (TID 27) in 14765 ms on tungdv-Hadoop (executor 1) (28/80)
+26/10/05 11:45:33 INFO YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 1.
+26/10/05 11:45:33 INFO DAGScheduler: Executor lost: 1 (epoch 0)
+26/10/05 11:45:33 INFO BlockManagerMasterEndpoint: Trying to remove executor 1 from BlockManagerMaster.
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_9 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_20 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_4 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_16 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_23 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_6 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_5 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_11 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_7 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_27 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_2 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_19 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_12 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_17 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_0 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_26 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_25 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_24 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_8 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_10 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_15 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_3 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_13 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_18 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_14 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_1 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_22 !
+26/10/05 11:45:33 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_21 !
+26/10/05 11:45:33 INFO BlockManagerMasterEndpoint: Removing block manager BlockManagerId(1, tungdv-Hadoop, 39785, None)
+26/10/05 11:45:33 INFO BlockManagerMaster: Removed 1 successfully in removeExecutor
+26/10/05 11:45:33 INFO DAGScheduler: Shuffle files lost for executor: 1 (epoch 0)
+26/10/05 11:45:34 WARN YarnSchedulerBackend$YarnSchedulerEndpoint: Requesting driver to remove executor 1 for reason Container from a bad node: container_1791165466837_0008_01_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:45:33.842]Container killed on request. Exit code is 143
+[2026-10-05 11:45:33.843]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:45:33.843]Killed by external signal
+.
+26/10/05 11:45:34 ERROR YarnScheduler: Lost executor 1 on tungdv-Hadoop: Container from a bad node: container_1791165466837_0008_01_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:45:33.842]Container killed on request. Exit code is 143
+[2026-10-05 11:45:33.843]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:45:33.843]Killed by external signal
+.
+26/10/05 11:45:34 WARN TaskSetManager: Lost task 29.0 in stage 0.0 (TID 29) (tungdv-Hadoop executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:45:33.842]Container killed on request. Exit code is 143
+[2026-10-05 11:45:33.843]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:45:33.843]Killed by external signal
+.
+26/10/05 11:45:34 WARN TaskSetManager: Lost task 31.0 in stage 0.0 (TID 31) (tungdv-Hadoop executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:45:33.842]Container killed on request. Exit code is 143
+[2026-10-05 11:45:33.843]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:45:33.843]Killed by external signal
+.
+26/10/05 11:45:34 WARN TaskSetManager: Lost task 28.0 in stage 0.0 (TID 28) (tungdv-Hadoop executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:45:33.842]Container killed on request. Exit code is 143
+[2026-10-05 11:45:33.843]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:45:33.843]Killed by external signal
+.
+26/10/05 11:45:34 WARN TaskSetManager: Lost task 30.0 in stage 0.0 (TID 30) (tungdv-Hadoop executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:45:33.842]Container killed on request. Exit code is 143
+[2026-10-05 11:45:33.843]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:45:33.843]Killed by external signal
+.
+26/10/05 11:45:34 INFO BlockManagerMasterEndpoint: Trying to remove executor 1 from BlockManagerMaster.
+26/10/05 11:45:34 INFO BlockManagerMaster: Removal of executor 1 requested
+26/10/05 11:45:34 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 1
+26/10/05 11:45:43 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.10.53:44064) with ID 2,  ResourceProfileId 0
+26/10/05 11:45:43 INFO BlockManagerMasterEndpoint: Registering block manager tungdv-Hadoop:44915 with 2.8 GiB RAM, BlockManagerId(2, tungdv-Hadoop, 44915, None)
+26/10/05 11:45:43 INFO TaskSetManager: Starting task 30.1 in stage 0.0 (TID 32) (tungdv-Hadoop, executor 2, partition 30, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:43 INFO TaskSetManager: Starting task 28.1 in stage 0.0 (TID 33) (tungdv-Hadoop, executor 2, partition 28, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:43 INFO TaskSetManager: Starting task 31.1 in stage 0.0 (TID 34) (tungdv-Hadoop, executor 2, partition 31, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:43 INFO TaskSetManager: Starting task 29.1 in stage 0.0 (TID 35) (tungdv-Hadoop, executor 2, partition 29, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:45:44 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on tungdv-Hadoop:44915 (size: 6.4 KiB, free: 2.8 GiB)
+26/10/05 11:45:44 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on tungdv-Hadoop:44915 (size: 52.5 KiB, free: 2.8 GiB)
+26/10/05 11:45:58 INFO BlockManagerInfo: Added rdd_2_30 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 11:45:58 INFO BlockManagerInfo: Added rdd_2_29 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 11:45:58 INFO BlockManagerInfo: Added rdd_2_28 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.6 GiB)
+26/10/05 11:45:58 INFO BlockManagerInfo: Added rdd_2_31 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.5 GiB)
+26/10/05 11:46:00 INFO TaskSetManager: Starting task 32.0 in stage 0.0 (TID 36) (tungdv-Hadoop, executor 2, partition 32, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:00 INFO TaskSetManager: Finished task 29.1 in stage 0.0 (TID 35) in 16971 ms on tungdv-Hadoop (executor 2) (29/80)
+26/10/05 11:46:00 INFO TaskSetManager: Starting task 33.0 in stage 0.0 (TID 37) (tungdv-Hadoop, executor 2, partition 33, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:00 INFO TaskSetManager: Finished task 30.1 in stage 0.0 (TID 32) in 16987 ms on tungdv-Hadoop (executor 2) (30/80)
+26/10/05 11:46:00 INFO TaskSetManager: Starting task 34.0 in stage 0.0 (TID 38) (tungdv-Hadoop, executor 2, partition 34, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:00 INFO TaskSetManager: Finished task 31.1 in stage 0.0 (TID 34) in 17158 ms on tungdv-Hadoop (executor 2) (31/80)
+26/10/05 11:46:00 INFO TaskSetManager: Starting task 35.0 in stage 0.0 (TID 39) (tungdv-Hadoop, executor 2, partition 35, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:00 INFO TaskSetManager: Finished task 28.1 in stage 0.0 (TID 33) in 17175 ms on tungdv-Hadoop (executor 2) (32/80)
+26/10/05 11:46:12 INFO BlockManagerInfo: Added rdd_2_32 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.4 GiB)
+26/10/05 11:46:13 INFO BlockManagerInfo: Added rdd_2_33 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.3 GiB)
+26/10/05 11:46:13 INFO BlockManagerInfo: Added rdd_2_34 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 11:46:13 INFO BlockManagerInfo: Added rdd_2_35 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 11:46:15 INFO TaskSetManager: Starting task 36.0 in stage 0.0 (TID 40) (tungdv-Hadoop, executor 2, partition 36, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:15 INFO TaskSetManager: Finished task 32.0 in stage 0.0 (TID 36) in 14366 ms on tungdv-Hadoop (executor 2) (33/80)
+26/10/05 11:46:15 INFO TaskSetManager: Starting task 37.0 in stage 0.0 (TID 41) (tungdv-Hadoop, executor 2, partition 37, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:15 INFO TaskSetManager: Finished task 33.0 in stage 0.0 (TID 37) in 14548 ms on tungdv-Hadoop (executor 2) (34/80)
+26/10/05 11:46:15 INFO TaskSetManager: Starting task 38.0 in stage 0.0 (TID 42) (tungdv-Hadoop, executor 2, partition 38, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:15 INFO TaskSetManager: Finished task 34.0 in stage 0.0 (TID 38) in 14586 ms on tungdv-Hadoop (executor 2) (35/80)
+26/10/05 11:46:15 INFO TaskSetManager: Starting task 39.0 in stage 0.0 (TID 43) (tungdv-Hadoop, executor 2, partition 39, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:15 INFO TaskSetManager: Finished task 35.0 in stage 0.0 (TID 39) in 14814 ms on tungdv-Hadoop (executor 2) (36/80)
+26/10/05 11:46:27 INFO BlockManagerInfo: Added rdd_2_36 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2.1 GiB)
+26/10/05 11:46:27 INFO BlockManagerInfo: Added rdd_2_37 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 2043.2 MiB)
+26/10/05 11:46:27 INFO BlockManagerInfo: Added rdd_2_38 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1958.4 MiB)
+26/10/05 11:46:28 INFO BlockManagerInfo: Added rdd_2_39 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1873.5 MiB)
+26/10/05 11:46:29 INFO TaskSetManager: Starting task 40.0 in stage 0.0 (TID 44) (tungdv-Hadoop, executor 2, partition 40, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:29 INFO TaskSetManager: Finished task 36.0 in stage 0.0 (TID 40) in 14366 ms on tungdv-Hadoop (executor 2) (37/80)
+26/10/05 11:46:29 INFO TaskSetManager: Starting task 41.0 in stage 0.0 (TID 45) (tungdv-Hadoop, executor 2, partition 41, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:29 INFO TaskSetManager: Finished task 37.0 in stage 0.0 (TID 41) in 14521 ms on tungdv-Hadoop (executor 2) (38/80)
+26/10/05 11:46:29 INFO TaskSetManager: Starting task 42.0 in stage 0.0 (TID 46) (tungdv-Hadoop, executor 2, partition 42, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:29 INFO TaskSetManager: Finished task 38.0 in stage 0.0 (TID 42) in 14536 ms on tungdv-Hadoop (executor 2) (39/80)
+26/10/05 11:46:30 INFO TaskSetManager: Starting task 43.0 in stage 0.0 (TID 47) (tungdv-Hadoop, executor 2, partition 43, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:30 INFO TaskSetManager: Finished task 39.0 in stage 0.0 (TID 43) in 14597 ms on tungdv-Hadoop (executor 2) (40/80)
+26/10/05 11:46:41 INFO BlockManagerInfo: Added rdd_2_40 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1788.6 MiB)
+26/10/05 11:46:42 INFO BlockManagerInfo: Added rdd_2_41 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1703.7 MiB)
+26/10/05 11:46:42 INFO BlockManagerInfo: Added rdd_2_42 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1618.9 MiB)
+26/10/05 11:46:42 INFO BlockManagerInfo: Added rdd_2_43 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1534.0 MiB)
+26/10/05 11:46:43 INFO TaskSetManager: Starting task 44.0 in stage 0.0 (TID 48) (tungdv-Hadoop, executor 2, partition 44, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:43 INFO TaskSetManager: Finished task 40.0 in stage 0.0 (TID 44) in 14404 ms on tungdv-Hadoop (executor 2) (41/80)
+26/10/05 11:46:44 INFO TaskSetManager: Starting task 45.0 in stage 0.0 (TID 49) (tungdv-Hadoop, executor 2, partition 45, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:44 INFO TaskSetManager: Finished task 41.0 in stage 0.0 (TID 45) in 14327 ms on tungdv-Hadoop (executor 2) (42/80)
+26/10/05 11:46:44 INFO TaskSetManager: Starting task 46.0 in stage 0.0 (TID 50) (tungdv-Hadoop, executor 2, partition 46, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:44 INFO TaskSetManager: Finished task 42.0 in stage 0.0 (TID 46) in 14407 ms on tungdv-Hadoop (executor 2) (43/80)
+26/10/05 11:46:44 INFO TaskSetManager: Starting task 47.0 in stage 0.0 (TID 51) (tungdv-Hadoop, executor 2, partition 47, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:44 INFO TaskSetManager: Finished task 43.0 in stage 0.0 (TID 47) in 14404 ms on tungdv-Hadoop (executor 2) (44/80)
+26/10/05 11:46:56 INFO BlockManagerInfo: Added rdd_2_44 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1449.1 MiB)
+26/10/05 11:46:56 INFO BlockManagerInfo: Added rdd_2_45 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1364.3 MiB)
+26/10/05 11:46:56 INFO BlockManagerInfo: Added rdd_2_46 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1279.4 MiB)
+26/10/05 11:46:57 INFO BlockManagerInfo: Added rdd_2_47 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1194.5 MiB)
+26/10/05 11:46:58 INFO TaskSetManager: Starting task 48.0 in stage 0.0 (TID 52) (tungdv-Hadoop, executor 2, partition 48, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:58 INFO TaskSetManager: Finished task 44.0 in stage 0.0 (TID 48) in 14809 ms on tungdv-Hadoop (executor 2) (45/80)
+26/10/05 11:46:58 INFO TaskSetManager: Starting task 49.0 in stage 0.0 (TID 53) (tungdv-Hadoop, executor 2, partition 49, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:58 INFO TaskSetManager: Finished task 45.0 in stage 0.0 (TID 49) in 14538 ms on tungdv-Hadoop (executor 2) (46/80)
+26/10/05 11:46:58 INFO TaskSetManager: Starting task 50.0 in stage 0.0 (TID 54) (tungdv-Hadoop, executor 2, partition 50, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:58 INFO TaskSetManager: Finished task 46.0 in stage 0.0 (TID 50) in 14518 ms on tungdv-Hadoop (executor 2) (47/80)
+26/10/05 11:46:59 INFO TaskSetManager: Starting task 51.0 in stage 0.0 (TID 55) (tungdv-Hadoop, executor 2, partition 51, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:46:59 INFO TaskSetManager: Finished task 47.0 in stage 0.0 (TID 51) in 14609 ms on tungdv-Hadoop (executor 2) (48/80)
+26/10/05 11:47:10 INFO BlockManagerInfo: Added rdd_2_49 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1109.6 MiB)
+26/10/05 11:47:11 INFO BlockManagerInfo: Added rdd_2_48 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 1024.8 MiB)
+26/10/05 11:47:11 INFO BlockManagerInfo: Added rdd_2_50 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 939.9 MiB)
+26/10/05 11:47:11 INFO BlockManagerInfo: Added rdd_2_51 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 855.0 MiB)
+26/10/05 11:47:13 INFO TaskSetManager: Starting task 52.0 in stage 0.0 (TID 56) (tungdv-Hadoop, executor 2, partition 52, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:13 INFO TaskSetManager: Finished task 49.0 in stage 0.0 (TID 53) in 14412 ms on tungdv-Hadoop (executor 2) (49/80)
+26/10/05 11:47:13 INFO TaskSetManager: Starting task 53.0 in stage 0.0 (TID 57) (tungdv-Hadoop, executor 2, partition 53, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:13 INFO TaskSetManager: Finished task 48.0 in stage 0.0 (TID 52) in 14685 ms on tungdv-Hadoop (executor 2) (50/80)
+26/10/05 11:47:13 INFO TaskSetManager: Starting task 54.0 in stage 0.0 (TID 58) (tungdv-Hadoop, executor 2, partition 54, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:13 INFO TaskSetManager: Finished task 50.0 in stage 0.0 (TID 54) in 14415 ms on tungdv-Hadoop (executor 2) (51/80)
+26/10/05 11:47:13 INFO TaskSetManager: Starting task 55.0 in stage 0.0 (TID 59) (tungdv-Hadoop, executor 2, partition 55, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:13 INFO TaskSetManager: Finished task 51.0 in stage 0.0 (TID 55) in 14344 ms on tungdv-Hadoop (executor 2) (52/80)
+26/10/05 11:47:25 INFO BlockManagerInfo: Added rdd_2_52 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 770.1 MiB)
+26/10/05 11:47:25 INFO BlockManagerInfo: Added rdd_2_53 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 685.3 MiB)
+26/10/05 11:47:25 INFO BlockManagerInfo: Added rdd_2_54 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 600.4 MiB)
+26/10/05 11:47:25 INFO BlockManagerInfo: Added rdd_2_55 in memory on tungdv-Hadoop:44915 (size: 84.9 MiB, free: 515.5 MiB)
+26/10/05 11:47:27 INFO TaskSetManager: Starting task 56.0 in stage 0.0 (TID 60) (tungdv-Hadoop, executor 2, partition 56, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:27 INFO TaskSetManager: Finished task 52.0 in stage 0.0 (TID 56) in 14573 ms on tungdv-Hadoop (executor 2) (53/80)
+26/10/05 11:47:27 INFO TaskSetManager: Starting task 57.0 in stage 0.0 (TID 61) (tungdv-Hadoop, executor 2, partition 57, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:27 INFO TaskSetManager: Finished task 53.0 in stage 0.0 (TID 57) in 14617 ms on tungdv-Hadoop (executor 2) (54/80)
+26/10/05 11:47:28 INFO TaskSetManager: Starting task 58.0 in stage 0.0 (TID 62) (tungdv-Hadoop, executor 2, partition 58, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:28 INFO TaskSetManager: Finished task 55.0 in stage 0.0 (TID 59) in 14443 ms on tungdv-Hadoop (executor 2) (55/80)
+26/10/05 11:47:28 INFO TaskSetManager: Starting task 59.0 in stage 0.0 (TID 63) (tungdv-Hadoop, executor 2, partition 59, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:28 INFO TaskSetManager: Finished task 54.0 in stage 0.0 (TID 58) in 14832 ms on tungdv-Hadoop (executor 2) (56/80)
+26/10/05 11:47:34 INFO YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 2.
+26/10/05 11:47:34 INFO DAGScheduler: Executor lost: 2 (epoch 1)
+26/10/05 11:47:34 INFO BlockManagerMasterEndpoint: Trying to remove executor 2 from BlockManagerMaster.
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_45 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_29 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_34 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_47 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_41 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_38 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_30 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_31 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_28 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_51 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_49 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_53 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_33 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_44 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_32 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_39 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_36 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_42 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_50 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_35 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_40 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_52 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_46 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_37 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_54 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_43 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_55 !
+26/10/05 11:47:34 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_48 !
+26/10/05 11:47:34 INFO BlockManagerMasterEndpoint: Removing block manager BlockManagerId(2, tungdv-Hadoop, 44915, None)
+26/10/05 11:47:34 INFO BlockManagerMaster: Removed 2 successfully in removeExecutor
+26/10/05 11:47:34 INFO DAGScheduler: Shuffle files lost for executor: 2 (epoch 1)
+26/10/05 11:47:34 ERROR YarnScheduler: Lost executor 2 on tungdv-Hadoop: Container from a bad node: container_1791165466837_0008_01_000003 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:47:34.595]Container killed on request. Exit code is 143
+[2026-10-05 11:47:34.596]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:47:34.596]Killed by external signal
+.
+26/10/05 11:47:34 WARN YarnSchedulerBackend$YarnSchedulerEndpoint: Requesting driver to remove executor 2 for reason Container from a bad node: container_1791165466837_0008_01_000003 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:47:34.595]Container killed on request. Exit code is 143
+[2026-10-05 11:47:34.596]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:47:34.596]Killed by external signal
+.
+26/10/05 11:47:34 WARN TaskSetManager: Lost task 58.0 in stage 0.0 (TID 62) (tungdv-Hadoop executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000003 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:47:34.595]Container killed on request. Exit code is 143
+[2026-10-05 11:47:34.596]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:47:34.596]Killed by external signal
+.
+26/10/05 11:47:34 WARN TaskSetManager: Lost task 57.0 in stage 0.0 (TID 61) (tungdv-Hadoop executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000003 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:47:34.595]Container killed on request. Exit code is 143
+[2026-10-05 11:47:34.596]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:47:34.596]Killed by external signal
+.
+26/10/05 11:47:34 WARN TaskSetManager: Lost task 56.0 in stage 0.0 (TID 60) (tungdv-Hadoop executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000003 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:47:34.595]Container killed on request. Exit code is 143
+[2026-10-05 11:47:34.596]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:47:34.596]Killed by external signal
+.
+26/10/05 11:47:34 WARN TaskSetManager: Lost task 59.0 in stage 0.0 (TID 63) (tungdv-Hadoop executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000003 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:47:34.595]Container killed on request. Exit code is 143
+[2026-10-05 11:47:34.596]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:47:34.596]Killed by external signal
+.
+26/10/05 11:47:34 INFO BlockManagerMasterEndpoint: Trying to remove executor 2 from BlockManagerMaster.
+26/10/05 11:47:34 INFO BlockManagerMaster: Removal of executor 2 requested
+26/10/05 11:47:34 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 2
+26/10/05 11:47:44 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.10.53:53942) with ID 3,  ResourceProfileId 0
+26/10/05 11:47:44 INFO BlockManagerMasterEndpoint: Registering block manager tungdv-Hadoop:39525 with 2.8 GiB RAM, BlockManagerId(3, tungdv-Hadoop, 39525, None)
+26/10/05 11:47:44 INFO TaskSetManager: Starting task 59.1 in stage 0.0 (TID 64) (tungdv-Hadoop, executor 3, partition 59, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:44 INFO TaskSetManager: Starting task 56.1 in stage 0.0 (TID 65) (tungdv-Hadoop, executor 3, partition 56, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:44 INFO TaskSetManager: Starting task 57.1 in stage 0.0 (TID 66) (tungdv-Hadoop, executor 3, partition 57, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:44 INFO TaskSetManager: Starting task 58.1 in stage 0.0 (TID 67) (tungdv-Hadoop, executor 3, partition 58, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:47:44 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on tungdv-Hadoop:39525 (size: 6.4 KiB, free: 2.8 GiB)
+26/10/05 11:47:45 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on tungdv-Hadoop:39525 (size: 52.5 KiB, free: 2.8 GiB)
+26/10/05 11:47:59 INFO BlockManagerInfo: Added rdd_2_58 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 11:47:59 INFO BlockManagerInfo: Added rdd_2_59 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 11:47:59 INFO BlockManagerInfo: Added rdd_2_56 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.6 GiB)
+26/10/05 11:47:59 INFO BlockManagerInfo: Added rdd_2_57 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.5 GiB)
+26/10/05 11:48:01 INFO TaskSetManager: Starting task 60.0 in stage 0.0 (TID 68) (tungdv-Hadoop, executor 3, partition 60, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:01 INFO TaskSetManager: Finished task 58.1 in stage 0.0 (TID 67) in 17144 ms on tungdv-Hadoop (executor 3) (57/80)
+26/10/05 11:48:01 INFO TaskSetManager: Finished task 59.1 in stage 0.0 (TID 64) in 17179 ms on tungdv-Hadoop (executor 3) (58/80)
+26/10/05 11:48:01 INFO TaskSetManager: Starting task 61.0 in stage 0.0 (TID 69) (tungdv-Hadoop, executor 3, partition 61, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:01 INFO TaskSetManager: Starting task 62.0 in stage 0.0 (TID 70) (tungdv-Hadoop, executor 3, partition 62, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:01 INFO TaskSetManager: Finished task 56.1 in stage 0.0 (TID 65) in 17219 ms on tungdv-Hadoop (executor 3) (59/80)
+26/10/05 11:48:01 INFO TaskSetManager: Starting task 63.0 in stage 0.0 (TID 71) (tungdv-Hadoop, executor 3, partition 63, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:01 INFO TaskSetManager: Finished task 57.1 in stage 0.0 (TID 66) in 17222 ms on tungdv-Hadoop (executor 3) (60/80)
+26/10/05 11:48:13 INFO BlockManagerInfo: Added rdd_2_62 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.4 GiB)
+26/10/05 11:48:13 INFO BlockManagerInfo: Added rdd_2_60 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.3 GiB)
+26/10/05 11:48:13 INFO BlockManagerInfo: Added rdd_2_61 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 11:48:13 INFO BlockManagerInfo: Added rdd_2_63 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 11:48:15 INFO TaskSetManager: Starting task 64.0 in stage 0.0 (TID 72) (tungdv-Hadoop, executor 3, partition 64, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:15 INFO TaskSetManager: Finished task 62.0 in stage 0.0 (TID 70) in 14173 ms on tungdv-Hadoop (executor 3) (61/80)
+26/10/05 11:48:15 INFO TaskSetManager: Starting task 65.0 in stage 0.0 (TID 73) (tungdv-Hadoop, executor 3, partition 65, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:15 INFO TaskSetManager: Finished task 60.0 in stage 0.0 (TID 68) in 14282 ms on tungdv-Hadoop (executor 3) (62/80)
+26/10/05 11:48:15 INFO TaskSetManager: Starting task 66.0 in stage 0.0 (TID 74) (tungdv-Hadoop, executor 3, partition 66, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:15 INFO TaskSetManager: Finished task 63.0 in stage 0.0 (TID 71) in 14335 ms on tungdv-Hadoop (executor 3) (63/80)
+26/10/05 11:48:15 INFO TaskSetManager: Starting task 67.0 in stage 0.0 (TID 75) (tungdv-Hadoop, executor 3, partition 67, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:15 INFO TaskSetManager: Finished task 61.0 in stage 0.0 (TID 69) in 14406 ms on tungdv-Hadoop (executor 3) (64/80)
+26/10/05 11:48:27 INFO BlockManagerInfo: Added rdd_2_65 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2.1 GiB)
+26/10/05 11:48:27 INFO BlockManagerInfo: Added rdd_2_64 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 2043.3 MiB)
+26/10/05 11:48:28 INFO BlockManagerInfo: Added rdd_2_67 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1958.4 MiB)
+26/10/05 11:48:28 INFO BlockManagerInfo: Added rdd_2_66 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1873.5 MiB)
+26/10/05 11:48:30 INFO TaskSetManager: Starting task 68.0 in stage 0.0 (TID 76) (tungdv-Hadoop, executor 3, partition 68, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:30 INFO TaskSetManager: Finished task 64.0 in stage 0.0 (TID 72) in 14296 ms on tungdv-Hadoop (executor 3) (65/80)
+26/10/05 11:48:30 INFO TaskSetManager: Starting task 69.0 in stage 0.0 (TID 77) (tungdv-Hadoop, executor 3, partition 69, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:30 INFO TaskSetManager: Finished task 65.0 in stage 0.0 (TID 73) in 14367 ms on tungdv-Hadoop (executor 3) (66/80)
+26/10/05 11:48:30 INFO TaskSetManager: Starting task 70.0 in stage 0.0 (TID 78) (tungdv-Hadoop, executor 3, partition 70, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:30 INFO TaskSetManager: Finished task 67.0 in stage 0.0 (TID 75) in 14454 ms on tungdv-Hadoop (executor 3) (67/80)
+26/10/05 11:48:30 INFO TaskSetManager: Starting task 71.0 in stage 0.0 (TID 79) (tungdv-Hadoop, executor 3, partition 71, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:30 INFO TaskSetManager: Finished task 66.0 in stage 0.0 (TID 74) in 14549 ms on tungdv-Hadoop (executor 3) (68/80)
+26/10/05 11:48:43 INFO BlockManagerInfo: Added rdd_2_68 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1788.7 MiB)
+26/10/05 11:48:44 INFO BlockManagerInfo: Added rdd_2_69 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1703.8 MiB)
+26/10/05 11:48:44 INFO BlockManagerInfo: Added rdd_2_70 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1618.9 MiB)
+26/10/05 11:48:44 INFO BlockManagerInfo: Added rdd_2_71 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1534.1 MiB)
+26/10/05 11:48:45 INFO TaskSetManager: Starting task 72.0 in stage 0.0 (TID 80) (tungdv-Hadoop, executor 3, partition 72, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:45 INFO TaskSetManager: Finished task 68.0 in stage 0.0 (TID 76) in 15820 ms on tungdv-Hadoop (executor 3) (69/80)
+26/10/05 11:48:46 INFO TaskSetManager: Starting task 73.0 in stage 0.0 (TID 81) (tungdv-Hadoop, executor 3, partition 73, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:46 INFO TaskSetManager: Finished task 69.0 in stage 0.0 (TID 77) in 15984 ms on tungdv-Hadoop (executor 3) (70/80)
+26/10/05 11:48:46 INFO TaskSetManager: Starting task 74.0 in stage 0.0 (TID 82) (tungdv-Hadoop, executor 3, partition 74, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:46 INFO TaskSetManager: Finished task 70.0 in stage 0.0 (TID 78) in 15959 ms on tungdv-Hadoop (executor 3) (71/80)
+26/10/05 11:48:46 INFO TaskSetManager: Starting task 75.0 in stage 0.0 (TID 83) (tungdv-Hadoop, executor 3, partition 75, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:48:46 INFO TaskSetManager: Finished task 71.0 in stage 0.0 (TID 79) in 16123 ms on tungdv-Hadoop (executor 3) (72/80)
+26/10/05 11:48:58 INFO BlockManagerInfo: Added rdd_2_72 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1449.2 MiB)
+26/10/05 11:48:58 INFO BlockManagerInfo: Added rdd_2_73 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1364.3 MiB)
+26/10/05 11:48:58 INFO BlockManagerInfo: Added rdd_2_74 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1279.4 MiB)
+26/10/05 11:48:58 INFO BlockManagerInfo: Added rdd_2_75 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1194.6 MiB)
+26/10/05 11:49:00 INFO TaskSetManager: Starting task 76.0 in stage 0.0 (TID 84) (tungdv-Hadoop, executor 3, partition 76, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:49:00 INFO TaskSetManager: Finished task 72.0 in stage 0.0 (TID 80) in 14468 ms on tungdv-Hadoop (executor 3) (73/80)
+26/10/05 11:49:00 INFO TaskSetManager: Starting task 77.0 in stage 0.0 (TID 85) (tungdv-Hadoop, executor 3, partition 77, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:49:00 INFO TaskSetManager: Finished task 73.0 in stage 0.0 (TID 81) in 14347 ms on tungdv-Hadoop (executor 3) (74/80)
+26/10/05 11:49:00 INFO TaskSetManager: Starting task 78.0 in stage 0.0 (TID 86) (tungdv-Hadoop, executor 3, partition 78, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:49:00 INFO TaskSetManager: Finished task 74.0 in stage 0.0 (TID 82) in 14420 ms on tungdv-Hadoop (executor 3) (75/80)
+26/10/05 11:49:01 INFO TaskSetManager: Finished task 75.0 in stage 0.0 (TID 83) in 14480 ms on tungdv-Hadoop (executor 3) (76/80)
+26/10/05 11:49:04 INFO TaskSetManager: Starting task 79.0 in stage 0.0 (TID 87) (tungdv-Hadoop, executor 3, partition 79, RACK_LOCAL, 9087 bytes) 
+26/10/05 11:49:12 INFO BlockManagerInfo: Added rdd_2_76 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1109.7 MiB)
+26/10/05 11:49:12 INFO BlockManagerInfo: Added rdd_2_77 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 1024.8 MiB)
+26/10/05 11:49:12 INFO BlockManagerInfo: Added rdd_2_78 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 939.9 MiB)
+26/10/05 11:49:14 INFO TaskSetManager: Finished task 76.0 in stage 0.0 (TID 84) in 14124 ms on tungdv-Hadoop (executor 3) (77/80)
+26/10/05 11:49:14 INFO TaskSetManager: Finished task 77.0 in stage 0.0 (TID 85) in 14269 ms on tungdv-Hadoop (executor 3) (78/80)
+26/10/05 11:49:15 INFO TaskSetManager: Finished task 78.0 in stage 0.0 (TID 86) in 14245 ms on tungdv-Hadoop (executor 3) (79/80)
+26/10/05 11:49:16 INFO BlockManagerInfo: Added rdd_2_79 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 855.1 MiB)
+26/10/05 11:49:18 INFO TaskSetManager: Finished task 79.0 in stage 0.0 (TID 87) in 14238 ms on tungdv-Hadoop (executor 3) (80/80)
+26/10/05 11:49:18 INFO YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+26/10/05 11:49:18 INFO DAGScheduler: ResultStage 0 (count at /home/hdoop/test-2/prime_spark.py:54) finished in 337.693 s
+26/10/05 11:49:18 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/05 11:49:18 INFO YarnScheduler: Killing all running tasks in stage 0: Stage finished
+26/10/05 11:49:18 INFO DAGScheduler: Job 0 finished: count at /home/hdoop/test-2/prime_spark.py:54, took 337.824063 s
+26/10/05 11:49:18 INFO SparkContext: Starting job: count at /home/hdoop/test-2/prime_spark.py:55
+26/10/05 11:49:18 INFO DAGScheduler: Got job 1 (count at /home/hdoop/test-2/prime_spark.py:55) with 80 output partitions
+26/10/05 11:49:18 INFO DAGScheduler: Final stage: ResultStage 1 (count at /home/hdoop/test-2/prime_spark.py:55)
+26/10/05 11:49:18 INFO DAGScheduler: Parents of final stage: List()
+26/10/05 11:49:18 INFO DAGScheduler: Missing parents: List()
+26/10/05 11:49:18 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[4] at count at /home/hdoop/test-2/prime_spark.py:55), which has no missing parents
+26/10/05 11:49:18 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 12.6 KiB, free 1048.4 MiB)
+26/10/05 11:49:18 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 6.8 KiB, free 1048.4 MiB)
+26/10/05 11:49:18 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.10.53:44479 (size: 6.8 KiB, free: 1048.7 MiB)
+26/10/05 11:49:18 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1611
+26/10/05 11:49:18 INFO DAGScheduler: Submitting 80 missing tasks from ResultStage 1 (PythonRDD[4] at count at /home/hdoop/test-2/prime_spark.py:55) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+26/10/05 11:49:18 INFO YarnScheduler: Adding task set 1.0 with 80 tasks resource profile 0
+26/10/05 11:49:18 INFO TaskSetManager: Starting task 56.0 in stage 1.0 (TID 88) (tungdv-Hadoop, executor 3, partition 56, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:49:18 INFO TaskSetManager: Starting task 57.0 in stage 1.0 (TID 89) (tungdv-Hadoop, executor 3, partition 57, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:49:18 INFO TaskSetManager: Starting task 58.0 in stage 1.0 (TID 90) (tungdv-Hadoop, executor 3, partition 58, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:49:18 INFO TaskSetManager: Starting task 59.0 in stage 1.0 (TID 91) (tungdv-Hadoop, executor 3, partition 59, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:49:18 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on tungdv-Hadoop:39525 (size: 6.8 KiB, free: 855.1 MiB)
+26/10/05 11:50:14 INFO TaskSetManager: Starting task 60.0 in stage 1.0 (TID 92) (tungdv-Hadoop, executor 3, partition 60, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:50:14 INFO TaskSetManager: Finished task 59.0 in stage 1.0 (TID 91) in 55630 ms on tungdv-Hadoop (executor 3) (1/80)
+26/10/05 11:50:15 INFO TaskSetManager: Starting task 61.0 in stage 1.0 (TID 93) (tungdv-Hadoop, executor 3, partition 61, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:50:15 INFO TaskSetManager: Finished task 58.0 in stage 1.0 (TID 90) in 57063 ms on tungdv-Hadoop (executor 3) (2/80)
+26/10/05 11:50:16 INFO TaskSetManager: Starting task 62.0 in stage 1.0 (TID 94) (tungdv-Hadoop, executor 3, partition 62, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:50:16 INFO TaskSetManager: Finished task 56.0 in stage 1.0 (TID 88) in 57526 ms on tungdv-Hadoop (executor 3) (3/80)
+26/10/05 11:50:17 INFO TaskSetManager: Starting task 63.0 in stage 1.0 (TID 95) (tungdv-Hadoop, executor 3, partition 63, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:50:17 INFO TaskSetManager: Finished task 57.0 in stage 1.0 (TID 89) in 58286 ms on tungdv-Hadoop (executor 3) (4/80)
+26/10/05 11:51:10 INFO TaskSetManager: Starting task 64.0 in stage 1.0 (TID 96) (tungdv-Hadoop, executor 3, partition 64, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:51:10 INFO TaskSetManager: Finished task 60.0 in stage 1.0 (TID 92) in 55815 ms on tungdv-Hadoop (executor 3) (5/80)
+26/10/05 11:51:12 INFO TaskSetManager: Starting task 65.0 in stage 1.0 (TID 97) (tungdv-Hadoop, executor 3, partition 65, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:51:12 INFO TaskSetManager: Finished task 61.0 in stage 1.0 (TID 93) in 56151 ms on tungdv-Hadoop (executor 3) (6/80)
+26/10/05 11:51:14 INFO TaskSetManager: Starting task 66.0 in stage 1.0 (TID 98) (tungdv-Hadoop, executor 3, partition 66, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:51:14 INFO TaskSetManager: Finished task 62.0 in stage 1.0 (TID 94) in 58282 ms on tungdv-Hadoop (executor 3) (7/80)
+26/10/05 11:51:15 INFO TaskSetManager: Starting task 67.0 in stage 1.0 (TID 99) (tungdv-Hadoop, executor 3, partition 67, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:51:15 INFO TaskSetManager: Finished task 63.0 in stage 1.0 (TID 95) in 58772 ms on tungdv-Hadoop (executor 3) (8/80)
+26/10/05 11:52:06 INFO TaskSetManager: Starting task 68.0 in stage 1.0 (TID 100) (tungdv-Hadoop, executor 3, partition 68, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:52:06 INFO TaskSetManager: Finished task 64.0 in stage 1.0 (TID 96) in 55966 ms on tungdv-Hadoop (executor 3) (9/80)
+26/10/05 11:52:08 INFO TaskSetManager: Starting task 69.0 in stage 1.0 (TID 101) (tungdv-Hadoop, executor 3, partition 69, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:52:08 INFO TaskSetManager: Finished task 65.0 in stage 1.0 (TID 97) in 56620 ms on tungdv-Hadoop (executor 3) (10/80)
+26/10/05 11:52:13 INFO TaskSetManager: Starting task 70.0 in stage 1.0 (TID 102) (tungdv-Hadoop, executor 3, partition 70, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:52:13 INFO TaskSetManager: Finished task 66.0 in stage 1.0 (TID 98) in 58714 ms on tungdv-Hadoop (executor 3) (11/80)
+26/10/05 11:52:13 INFO TaskSetManager: Starting task 71.0 in stage 1.0 (TID 103) (tungdv-Hadoop, executor 3, partition 71, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:52:13 INFO TaskSetManager: Finished task 67.0 in stage 1.0 (TID 99) in 58017 ms on tungdv-Hadoop (executor 3) (12/80)
+26/10/05 11:53:02 INFO TaskSetManager: Starting task 72.0 in stage 1.0 (TID 104) (tungdv-Hadoop, executor 3, partition 72, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:53:02 INFO TaskSetManager: Finished task 68.0 in stage 1.0 (TID 100) in 56183 ms on tungdv-Hadoop (executor 3) (13/80)
+26/10/05 11:53:04 INFO TaskSetManager: Starting task 73.0 in stage 1.0 (TID 105) (tungdv-Hadoop, executor 3, partition 73, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:53:04 INFO TaskSetManager: Finished task 69.0 in stage 1.0 (TID 101) in 55736 ms on tungdv-Hadoop (executor 3) (14/80)
+26/10/05 11:53:11 INFO TaskSetManager: Starting task 74.0 in stage 1.0 (TID 106) (tungdv-Hadoop, executor 3, partition 74, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:53:11 INFO TaskSetManager: Finished task 70.0 in stage 1.0 (TID 102) in 57758 ms on tungdv-Hadoop (executor 3) (15/80)
+26/10/05 11:53:13 INFO TaskSetManager: Starting task 75.0 in stage 1.0 (TID 107) (tungdv-Hadoop, executor 3, partition 75, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:53:13 INFO TaskSetManager: Finished task 71.0 in stage 1.0 (TID 103) in 60059 ms on tungdv-Hadoop (executor 3) (16/80)
+26/10/05 11:53:58 INFO TaskSetManager: Starting task 76.0 in stage 1.0 (TID 108) (tungdv-Hadoop, executor 3, partition 76, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:53:58 INFO TaskSetManager: Finished task 72.0 in stage 1.0 (TID 104) in 55670 ms on tungdv-Hadoop (executor 3) (17/80)
+26/10/05 11:54:02 INFO TaskSetManager: Starting task 77.0 in stage 1.0 (TID 109) (tungdv-Hadoop, executor 3, partition 77, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:54:02 INFO TaskSetManager: Finished task 73.0 in stage 1.0 (TID 105) in 57652 ms on tungdv-Hadoop (executor 3) (18/80)
+26/10/05 11:54:08 INFO TaskSetManager: Starting task 78.0 in stage 1.0 (TID 110) (tungdv-Hadoop, executor 3, partition 78, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:54:08 INFO TaskSetManager: Finished task 74.0 in stage 1.0 (TID 106) in 57552 ms on tungdv-Hadoop (executor 3) (19/80)
+26/10/05 11:54:12 INFO TaskSetManager: Starting task 79.0 in stage 1.0 (TID 111) (tungdv-Hadoop, executor 3, partition 79, PROCESS_LOCAL, 9087 bytes) 
+26/10/05 11:54:12 INFO TaskSetManager: Finished task 75.0 in stage 1.0 (TID 107) in 58674 ms on tungdv-Hadoop (executor 3) (20/80)
+26/10/05 11:54:56 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 112) (tungdv-Hadoop, executor 3, partition 0, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:54:56 INFO TaskSetManager: Finished task 76.0 in stage 1.0 (TID 108) in 58696 ms on tungdv-Hadoop (executor 3) (21/80)
+26/10/05 11:54:59 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 113) (tungdv-Hadoop, executor 3, partition 1, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:54:59 INFO TaskSetManager: Finished task 77.0 in stage 1.0 (TID 109) in 57599 ms on tungdv-Hadoop (executor 3) (22/80)
+26/10/05 11:55:06 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 114) (tungdv-Hadoop, executor 3, partition 2, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:55:06 INFO TaskSetManager: Finished task 78.0 in stage 1.0 (TID 110) in 57882 ms on tungdv-Hadoop (executor 3) (23/80)
+26/10/05 11:55:09 INFO BlockManagerInfo: Added rdd_2_0 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 770.2 MiB)
+26/10/05 11:55:09 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 115) (tungdv-Hadoop, executor 3, partition 3, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:55:09 INFO TaskSetManager: Finished task 79.0 in stage 1.0 (TID 111) in 57016 ms on tungdv-Hadoop (executor 3) (24/80)
+26/10/05 11:55:11 INFO BlockManagerInfo: Added rdd_2_1 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 685.3 MiB)
+26/10/05 11:55:18 INFO BlockManagerInfo: Added rdd_2_2 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 600.5 MiB)
+26/10/05 11:55:21 INFO BlockManagerInfo: Added rdd_2_3 in memory on tungdv-Hadoop:39525 (size: 84.9 MiB, free: 515.6 MiB)
+26/10/05 11:56:07 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 116) (tungdv-Hadoop, executor 3, partition 4, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:56:07 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 112) in 70600 ms on tungdv-Hadoop (executor 3) (25/80)
+26/10/05 11:56:08 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 117) (tungdv-Hadoop, executor 3, partition 5, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:56:08 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 113) in 68873 ms on tungdv-Hadoop (executor 3) (26/80)
+26/10/05 11:56:18 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 118) (tungdv-Hadoop, executor 3, partition 6, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:56:18 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 115) in 68653 ms on tungdv-Hadoop (executor 3) (27/80)
+26/10/05 11:56:18 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 119) (tungdv-Hadoop, executor 3, partition 7, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:56:18 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 114) in 71941 ms on tungdv-Hadoop (executor 3) (28/80)
+26/10/05 11:56:18 INFO YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 3.
+26/10/05 11:56:18 INFO DAGScheduler: Executor lost: 3 (epoch 2)
+26/10/05 11:56:18 INFO BlockManagerMasterEndpoint: Trying to remove executor 3 from BlockManagerMaster.
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_58 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_64 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_72 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_71 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_75 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_2 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_56 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_78 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_63 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_67 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_65 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_0 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_57 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_62 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_68 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_76 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_59 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_3 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_60 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_69 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_1 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_61 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_73 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_79 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_66 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_74 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_77 !
+26/10/05 11:56:18 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_70 !
+26/10/05 11:56:18 INFO BlockManagerMasterEndpoint: Removing block manager BlockManagerId(3, tungdv-Hadoop, 39525, None)
+26/10/05 11:56:18 INFO BlockManagerMaster: Removed 3 successfully in removeExecutor
+26/10/05 11:56:18 INFO DAGScheduler: Shuffle files lost for executor: 3 (epoch 2)
+26/10/05 11:56:19 ERROR YarnScheduler: Lost executor 3 on tungdv-Hadoop: Container from a bad node: container_1791165466837_0008_01_000004 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:56:19.299]Container killed on request. Exit code is 143
+[2026-10-05 11:56:19.299]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:56:19.300]Killed by external signal
+.
+26/10/05 11:56:19 WARN YarnSchedulerBackend$YarnSchedulerEndpoint: Requesting driver to remove executor 3 for reason Container from a bad node: container_1791165466837_0008_01_000004 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:56:19.299]Container killed on request. Exit code is 143
+[2026-10-05 11:56:19.299]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:56:19.300]Killed by external signal
+.
+26/10/05 11:56:19 WARN TaskSetManager: Lost task 7.0 in stage 1.0 (TID 119) (tungdv-Hadoop executor 3): ExecutorLostFailure (executor 3 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000004 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:56:19.299]Container killed on request. Exit code is 143
+[2026-10-05 11:56:19.299]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:56:19.300]Killed by external signal
+.
+26/10/05 11:56:19 WARN TaskSetManager: Lost task 4.0 in stage 1.0 (TID 116) (tungdv-Hadoop executor 3): ExecutorLostFailure (executor 3 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000004 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:56:19.299]Container killed on request. Exit code is 143
+[2026-10-05 11:56:19.299]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:56:19.300]Killed by external signal
+.
+26/10/05 11:56:19 WARN TaskSetManager: Lost task 6.0 in stage 1.0 (TID 118) (tungdv-Hadoop executor 3): ExecutorLostFailure (executor 3 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000004 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:56:19.299]Container killed on request. Exit code is 143
+[2026-10-05 11:56:19.299]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:56:19.300]Killed by external signal
+.
+26/10/05 11:56:19 WARN TaskSetManager: Lost task 5.0 in stage 1.0 (TID 117) (tungdv-Hadoop executor 3): ExecutorLostFailure (executor 3 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_01_000004 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 11:56:19.299]Container killed on request. Exit code is 143
+[2026-10-05 11:56:19.299]Container exited with a non-zero exit code 143. 
+[2026-10-05 11:56:19.300]Killed by external signal
+.
+26/10/05 11:56:19 INFO BlockManagerMaster: Removal of executor 3 requested
+26/10/05 11:56:19 INFO BlockManagerMasterEndpoint: Trying to remove executor 3 from BlockManagerMaster.
+26/10/05 11:56:19 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 3
+26/10/05 11:56:32 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> tungdv-Hadoop, PROXY_URI_BASES -> http://tungdv-Hadoop:8088/proxy/application_1791165466837_0008), /proxy/application_1791165466837_0008
+26/10/05 11:56:32 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+26/10/05 11:56:38 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.10.53:41444) with ID 4,  ResourceProfileId 0
+26/10/05 11:56:38 INFO BlockManagerMasterEndpoint: Registering block manager tungdv-Hadoop:38169 with 2.8 GiB RAM, BlockManagerId(4, tungdv-Hadoop, 38169, None)
+26/10/05 11:56:38 INFO TaskSetManager: Starting task 5.1 in stage 1.0 (TID 120) (tungdv-Hadoop, executor 4, partition 5, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:56:38 INFO TaskSetManager: Starting task 6.1 in stage 1.0 (TID 121) (tungdv-Hadoop, executor 4, partition 6, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:56:38 INFO TaskSetManager: Starting task 4.1 in stage 1.0 (TID 122) (tungdv-Hadoop, executor 4, partition 4, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:56:38 INFO TaskSetManager: Starting task 7.1 in stage 1.0 (TID 123) (tungdv-Hadoop, executor 4, partition 7, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:56:38 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on tungdv-Hadoop:38169 (size: 6.8 KiB, free: 2.8 GiB)
+26/10/05 11:56:39 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on tungdv-Hadoop:38169 (size: 52.5 KiB, free: 2.8 GiB)
+26/10/05 11:56:53 INFO BlockManagerInfo: Added rdd_2_5 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 11:56:53 INFO BlockManagerInfo: Added rdd_2_6 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 11:56:53 INFO BlockManagerInfo: Added rdd_2_4 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.6 GiB)
+26/10/05 11:56:53 INFO BlockManagerInfo: Added rdd_2_7 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.5 GiB)
+26/10/05 11:57:49 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 124) (tungdv-Hadoop, executor 4, partition 8, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:57:49 INFO TaskSetManager: Finished task 4.1 in stage 1.0 (TID 122) in 71428 ms on tungdv-Hadoop (executor 4) (29/80)
+26/10/05 11:57:50 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 125) (tungdv-Hadoop, executor 4, partition 9, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:57:50 INFO TaskSetManager: Finished task 5.1 in stage 1.0 (TID 120) in 71704 ms on tungdv-Hadoop (executor 4) (30/80)
+26/10/05 11:57:50 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 126) (tungdv-Hadoop, executor 4, partition 10, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:57:50 INFO TaskSetManager: Finished task 6.1 in stage 1.0 (TID 121) in 72317 ms on tungdv-Hadoop (executor 4) (31/80)
+26/10/05 11:57:51 INFO TaskSetManager: Starting task 11.0 in stage 1.0 (TID 127) (tungdv-Hadoop, executor 4, partition 11, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:57:51 INFO TaskSetManager: Finished task 7.1 in stage 1.0 (TID 123) in 73417 ms on tungdv-Hadoop (executor 4) (32/80)
+26/10/05 11:58:02 INFO BlockManagerInfo: Added rdd_2_9 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.4 GiB)
+26/10/05 11:58:02 INFO BlockManagerInfo: Added rdd_2_8 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.3 GiB)
+26/10/05 11:58:03 INFO BlockManagerInfo: Added rdd_2_10 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 11:58:04 INFO BlockManagerInfo: Added rdd_2_11 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 11:58:58 INFO TaskSetManager: Starting task 12.0 in stage 1.0 (TID 128) (tungdv-Hadoop, executor 4, partition 12, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:58:58 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 124) in 68392 ms on tungdv-Hadoop (executor 4) (33/80)
+26/10/05 11:58:59 INFO TaskSetManager: Starting task 13.0 in stage 1.0 (TID 129) (tungdv-Hadoop, executor 4, partition 13, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:58:59 INFO TaskSetManager: Finished task 11.0 in stage 1.0 (TID 127) in 67971 ms on tungdv-Hadoop (executor 4) (34/80)
+26/10/05 11:58:59 INFO TaskSetManager: Starting task 14.0 in stage 1.0 (TID 130) (tungdv-Hadoop, executor 4, partition 14, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:58:59 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 125) in 69830 ms on tungdv-Hadoop (executor 4) (35/80)
+26/10/05 11:59:02 INFO TaskSetManager: Starting task 15.0 in stage 1.0 (TID 131) (tungdv-Hadoop, executor 4, partition 15, NODE_LOCAL, 9087 bytes) 
+26/10/05 11:59:02 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 126) in 71513 ms on tungdv-Hadoop (executor 4) (36/80)
+26/10/05 11:59:10 INFO BlockManagerInfo: Added rdd_2_12 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2.1 GiB)
+26/10/05 11:59:11 INFO BlockManagerInfo: Added rdd_2_13 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 2043.3 MiB)
+26/10/05 11:59:12 INFO BlockManagerInfo: Added rdd_2_14 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1958.4 MiB)
+26/10/05 11:59:14 INFO BlockManagerInfo: Added rdd_2_15 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1873.5 MiB)
+26/10/05 12:00:08 INFO TaskSetManager: Starting task 16.0 in stage 1.0 (TID 132) (tungdv-Hadoop, executor 4, partition 16, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:00:08 INFO TaskSetManager: Finished task 12.0 in stage 1.0 (TID 128) in 69810 ms on tungdv-Hadoop (executor 4) (37/80)
+26/10/05 12:00:10 INFO TaskSetManager: Starting task 17.0 in stage 1.0 (TID 133) (tungdv-Hadoop, executor 4, partition 17, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:00:10 INFO TaskSetManager: Finished task 14.0 in stage 1.0 (TID 130) in 70205 ms on tungdv-Hadoop (executor 4) (38/80)
+26/10/05 12:00:10 INFO TaskSetManager: Starting task 18.0 in stage 1.0 (TID 134) (tungdv-Hadoop, executor 4, partition 18, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:00:10 INFO TaskSetManager: Finished task 15.0 in stage 1.0 (TID 131) in 68217 ms on tungdv-Hadoop (executor 4) (39/80)
+26/10/05 12:00:11 INFO TaskSetManager: Starting task 19.0 in stage 1.0 (TID 135) (tungdv-Hadoop, executor 4, partition 19, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:00:11 INFO TaskSetManager: Finished task 13.0 in stage 1.0 (TID 129) in 71561 ms on tungdv-Hadoop (executor 4) (40/80)
+26/10/05 12:00:20 INFO BlockManagerInfo: Added rdd_2_16 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1788.7 MiB)
+26/10/05 12:00:22 INFO BlockManagerInfo: Added rdd_2_17 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1703.8 MiB)
+26/10/05 12:00:22 INFO BlockManagerInfo: Added rdd_2_18 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1618.9 MiB)
+26/10/05 12:00:23 INFO BlockManagerInfo: Added rdd_2_19 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1534.0 MiB)
+26/10/05 12:01:19 INFO TaskSetManager: Starting task 20.0 in stage 1.0 (TID 136) (tungdv-Hadoop, executor 4, partition 20, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:01:19 INFO TaskSetManager: Finished task 16.0 in stage 1.0 (TID 132) in 71056 ms on tungdv-Hadoop (executor 4) (41/80)
+26/10/05 12:01:19 INFO TaskSetManager: Starting task 21.0 in stage 1.0 (TID 137) (tungdv-Hadoop, executor 4, partition 21, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:01:19 INFO TaskSetManager: Finished task 19.0 in stage 1.0 (TID 135) in 67862 ms on tungdv-Hadoop (executor 4) (42/80)
+26/10/05 12:01:19 INFO TaskSetManager: Starting task 22.0 in stage 1.0 (TID 138) (tungdv-Hadoop, executor 4, partition 22, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:01:19 INFO TaskSetManager: Finished task 17.0 in stage 1.0 (TID 133) in 69570 ms on tungdv-Hadoop (executor 4) (43/80)
+26/10/05 12:01:20 INFO TaskSetManager: Starting task 23.0 in stage 1.0 (TID 139) (tungdv-Hadoop, executor 4, partition 23, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:01:20 INFO TaskSetManager: Finished task 18.0 in stage 1.0 (TID 134) in 69741 ms on tungdv-Hadoop (executor 4) (44/80)
+26/10/05 12:01:31 INFO BlockManagerInfo: Added rdd_2_20 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1449.2 MiB)
+26/10/05 12:01:31 INFO BlockManagerInfo: Added rdd_2_21 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1364.3 MiB)
+26/10/05 12:01:32 INFO BlockManagerInfo: Added rdd_2_22 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1279.4 MiB)
+26/10/05 12:01:32 INFO BlockManagerInfo: Added rdd_2_23 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1194.6 MiB)
+26/10/05 12:02:27 INFO TaskSetManager: Starting task 24.0 in stage 1.0 (TID 140) (tungdv-Hadoop, executor 4, partition 24, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:02:27 INFO TaskSetManager: Finished task 20.0 in stage 1.0 (TID 136) in 68493 ms on tungdv-Hadoop (executor 4) (45/80)
+26/10/05 12:02:28 INFO TaskSetManager: Starting task 25.0 in stage 1.0 (TID 141) (tungdv-Hadoop, executor 4, partition 25, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:02:28 INFO TaskSetManager: Finished task 21.0 in stage 1.0 (TID 137) in 69480 ms on tungdv-Hadoop (executor 4) (46/80)
+26/10/05 12:02:30 INFO TaskSetManager: Starting task 26.0 in stage 1.0 (TID 142) (tungdv-Hadoop, executor 4, partition 26, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:02:30 INFO TaskSetManager: Finished task 23.0 in stage 1.0 (TID 139) in 70418 ms on tungdv-Hadoop (executor 4) (47/80)
+26/10/05 12:02:31 INFO TaskSetManager: Starting task 27.0 in stage 1.0 (TID 143) (tungdv-Hadoop, executor 4, partition 27, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:02:31 INFO TaskSetManager: Finished task 22.0 in stage 1.0 (TID 138) in 71927 ms on tungdv-Hadoop (executor 4) (48/80)
+26/10/05 12:02:39 INFO BlockManagerInfo: Added rdd_2_24 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1109.7 MiB)
+26/10/05 12:02:40 INFO BlockManagerInfo: Added rdd_2_25 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 1024.8 MiB)
+26/10/05 12:02:42 INFO BlockManagerInfo: Added rdd_2_26 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 940.0 MiB)
+26/10/05 12:02:43 INFO BlockManagerInfo: Added rdd_2_27 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 855.1 MiB)
+26/10/05 12:03:37 INFO TaskSetManager: Starting task 28.0 in stage 1.0 (TID 144) (tungdv-Hadoop, executor 4, partition 28, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:03:37 INFO TaskSetManager: Finished task 24.0 in stage 1.0 (TID 140) in 69820 ms on tungdv-Hadoop (executor 4) (49/80)
+26/10/05 12:03:37 INFO TaskSetManager: Starting task 29.0 in stage 1.0 (TID 145) (tungdv-Hadoop, executor 4, partition 29, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:03:37 INFO TaskSetManager: Finished task 25.0 in stage 1.0 (TID 141) in 69023 ms on tungdv-Hadoop (executor 4) (50/80)
+26/10/05 12:03:38 INFO TaskSetManager: Starting task 30.0 in stage 1.0 (TID 146) (tungdv-Hadoop, executor 4, partition 30, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:03:38 INFO TaskSetManager: Finished task 26.0 in stage 1.0 (TID 142) in 68358 ms on tungdv-Hadoop (executor 4) (51/80)
+26/10/05 12:03:41 INFO TaskSetManager: Starting task 31.0 in stage 1.0 (TID 147) (tungdv-Hadoop, executor 4, partition 31, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:03:41 INFO TaskSetManager: Finished task 27.0 in stage 1.0 (TID 143) in 69773 ms on tungdv-Hadoop (executor 4) (52/80)
+26/10/05 12:03:49 INFO BlockManagerInfo: Added rdd_2_28 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 770.2 MiB)
+26/10/05 12:03:49 INFO BlockManagerInfo: Added rdd_2_29 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 685.4 MiB)
+26/10/05 12:03:51 INFO BlockManagerInfo: Added rdd_2_30 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 600.5 MiB)
+26/10/05 12:03:53 INFO BlockManagerInfo: Added rdd_2_31 in memory on tungdv-Hadoop:38169 (size: 84.9 MiB, free: 515.6 MiB)
+26/10/05 12:04:46 INFO TaskSetManager: Starting task 32.0 in stage 1.0 (TID 148) (tungdv-Hadoop, executor 4, partition 32, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:04:46 INFO TaskSetManager: Finished task 29.0 in stage 1.0 (TID 145) in 68740 ms on tungdv-Hadoop (executor 4) (53/80)
+26/10/05 12:04:47 INFO TaskSetManager: Starting task 33.0 in stage 1.0 (TID 149) (tungdv-Hadoop, executor 4, partition 33, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:04:47 INFO TaskSetManager: Finished task 30.0 in stage 1.0 (TID 146) in 68715 ms on tungdv-Hadoop (executor 4) (54/80)
+26/10/05 12:04:48 INFO TaskSetManager: Starting task 34.0 in stage 1.0 (TID 150) (tungdv-Hadoop, executor 4, partition 34, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:04:48 INFO TaskSetManager: Finished task 28.0 in stage 1.0 (TID 144) in 71506 ms on tungdv-Hadoop (executor 4) (55/80)
+26/10/05 12:04:50 INFO TaskSetManager: Starting task 35.0 in stage 1.0 (TID 151) (tungdv-Hadoop, executor 4, partition 35, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:04:50 INFO TaskSetManager: Finished task 31.0 in stage 1.0 (TID 147) in 68864 ms on tungdv-Hadoop (executor 4) (56/80)
+26/10/05 12:04:54 INFO YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 4.
+26/10/05 12:04:54 INFO DAGScheduler: Executor lost: 4 (epoch 3)
+26/10/05 12:04:54 INFO BlockManagerMasterEndpoint: Trying to remove executor 4 from BlockManagerMaster.
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_9 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_20 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_4 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_16 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_23 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_6 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_5 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_29 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_11 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_7 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_27 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_30 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_19 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_31 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_12 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_17 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_28 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_26 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_25 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_24 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_8 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_10 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_15 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_13 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_18 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_14 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_22 !
+26/10/05 12:04:54 WARN BlockManagerMasterEndpoint: No more replicas available for rdd_2_21 !
+26/10/05 12:04:54 INFO BlockManagerMasterEndpoint: Removing block manager BlockManagerId(4, tungdv-Hadoop, 38169, None)
+26/10/05 12:04:54 INFO BlockManagerMaster: Removed 4 successfully in removeExecutor
+26/10/05 12:04:54 INFO DAGScheduler: Shuffle files lost for executor: 4 (epoch 3)
+26/10/05 12:04:54 ERROR YarnScheduler: Lost executor 4 on tungdv-Hadoop: Container from a bad node: container_1791165466837_0008_02_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 12:04:54.635]Container killed on request. Exit code is 143
+[2026-10-05 12:04:54.636]Container exited with a non-zero exit code 143. 
+[2026-10-05 12:04:54.636]Killed by external signal
+.
+26/10/05 12:04:54 WARN TaskSetManager: Lost task 33.0 in stage 1.0 (TID 149) (tungdv-Hadoop executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_02_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 12:04:54.635]Container killed on request. Exit code is 143
+[2026-10-05 12:04:54.636]Container exited with a non-zero exit code 143. 
+[2026-10-05 12:04:54.636]Killed by external signal
+.
+26/10/05 12:04:54 WARN TaskSetManager: Lost task 35.0 in stage 1.0 (TID 151) (tungdv-Hadoop executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_02_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 12:04:54.635]Container killed on request. Exit code is 143
+[2026-10-05 12:04:54.636]Container exited with a non-zero exit code 143. 
+[2026-10-05 12:04:54.636]Killed by external signal
+.
+26/10/05 12:04:54 WARN TaskSetManager: Lost task 32.0 in stage 1.0 (TID 148) (tungdv-Hadoop executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_02_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 12:04:54.635]Container killed on request. Exit code is 143
+[2026-10-05 12:04:54.636]Container exited with a non-zero exit code 143. 
+[2026-10-05 12:04:54.636]Killed by external signal
+.
+26/10/05 12:04:54 WARN TaskSetManager: Lost task 34.0 in stage 1.0 (TID 150) (tungdv-Hadoop executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: Container from a bad node: container_1791165466837_0008_02_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 12:04:54.635]Container killed on request. Exit code is 143
+[2026-10-05 12:04:54.636]Container exited with a non-zero exit code 143. 
+[2026-10-05 12:04:54.636]Killed by external signal
+.
+26/10/05 12:04:54 WARN YarnSchedulerBackend$YarnSchedulerEndpoint: Requesting driver to remove executor 4 for reason Container from a bad node: container_1791165466837_0008_02_000002 on host: tungdv-Hadoop. Exit status: 143. Diagnostics: [2026-10-05 12:04:54.635]Container killed on request. Exit code is 143
+[2026-10-05 12:04:54.636]Container exited with a non-zero exit code 143. 
+[2026-10-05 12:04:54.636]Killed by external signal
+.
+26/10/05 12:04:54 INFO BlockManagerMaster: Removal of executor 4 requested
+26/10/05 12:04:54 INFO BlockManagerMasterEndpoint: Trying to remove executor 4 from BlockManagerMaster.
+26/10/05 12:04:54 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asked to remove non-existent executor 4
+26/10/05 12:05:04 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.10.53:42534) with ID 5,  ResourceProfileId 0
+26/10/05 12:05:04 INFO BlockManagerMasterEndpoint: Registering block manager tungdv-Hadoop:44629 with 2.8 GiB RAM, BlockManagerId(5, tungdv-Hadoop, 44629, None)
+26/10/05 12:05:04 INFO TaskSetManager: Starting task 34.1 in stage 1.0 (TID 152) (tungdv-Hadoop, executor 5, partition 34, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:05:04 INFO TaskSetManager: Starting task 32.1 in stage 1.0 (TID 153) (tungdv-Hadoop, executor 5, partition 32, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:05:04 INFO TaskSetManager: Starting task 35.1 in stage 1.0 (TID 154) (tungdv-Hadoop, executor 5, partition 35, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:05:04 INFO TaskSetManager: Starting task 33.1 in stage 1.0 (TID 155) (tungdv-Hadoop, executor 5, partition 33, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:05:05 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on tungdv-Hadoop:44629 (size: 6.8 KiB, free: 2.8 GiB)
+26/10/05 12:05:05 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on tungdv-Hadoop:44629 (size: 52.5 KiB, free: 2.8 GiB)
+26/10/05 12:05:10 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.10.53:44479 in memory (size: 6.4 KiB, free: 1048.7 MiB)
+26/10/05 12:05:20 INFO BlockManagerInfo: Added rdd_2_34 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 12:05:20 INFO BlockManagerInfo: Added rdd_2_33 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 12:05:20 INFO BlockManagerInfo: Added rdd_2_32 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.6 GiB)
+26/10/05 12:05:20 INFO BlockManagerInfo: Added rdd_2_35 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.5 GiB)
+26/10/05 12:06:17 INFO TaskSetManager: Starting task 36.0 in stage 1.0 (TID 156) (tungdv-Hadoop, executor 5, partition 36, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:06:17 INFO TaskSetManager: Finished task 33.1 in stage 1.0 (TID 155) in 73024 ms on tungdv-Hadoop (executor 5) (57/80)
+26/10/05 12:06:17 INFO TaskSetManager: Starting task 37.0 in stage 1.0 (TID 157) (tungdv-Hadoop, executor 5, partition 37, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:06:17 INFO TaskSetManager: Finished task 34.1 in stage 1.0 (TID 152) in 73035 ms on tungdv-Hadoop (executor 5) (58/80)
+26/10/05 12:06:18 INFO TaskSetManager: Starting task 38.0 in stage 1.0 (TID 158) (tungdv-Hadoop, executor 5, partition 38, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:06:18 INFO TaskSetManager: Finished task 35.1 in stage 1.0 (TID 154) in 73300 ms on tungdv-Hadoop (executor 5) (59/80)
+26/10/05 12:06:19 INFO TaskSetManager: Starting task 39.0 in stage 1.0 (TID 159) (tungdv-Hadoop, executor 5, partition 39, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:06:19 INFO TaskSetManager: Finished task 32.1 in stage 1.0 (TID 153) in 74283 ms on tungdv-Hadoop (executor 5) (60/80)
+26/10/05 12:06:30 INFO BlockManagerInfo: Added rdd_2_36 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.4 GiB)
+26/10/05 12:06:30 INFO BlockManagerInfo: Added rdd_2_37 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.3 GiB)
+26/10/05 12:06:30 INFO BlockManagerInfo: Added rdd_2_38 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 12:06:31 INFO BlockManagerInfo: Added rdd_2_39 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 12:07:27 INFO TaskSetManager: Starting task 40.0 in stage 1.0 (TID 160) (tungdv-Hadoop, executor 5, partition 40, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:07:27 INFO TaskSetManager: Finished task 37.0 in stage 1.0 (TID 157) in 69330 ms on tungdv-Hadoop (executor 5) (61/80)
+26/10/05 12:07:27 INFO TaskSetManager: Starting task 41.0 in stage 1.0 (TID 161) (tungdv-Hadoop, executor 5, partition 41, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:07:27 INFO TaskSetManager: Finished task 38.0 in stage 1.0 (TID 158) in 69457 ms on tungdv-Hadoop (executor 5) (62/80)
+26/10/05 12:07:29 INFO TaskSetManager: Starting task 42.0 in stage 1.0 (TID 162) (tungdv-Hadoop, executor 5, partition 42, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:07:29 INFO TaskSetManager: Finished task 36.0 in stage 1.0 (TID 156) in 71349 ms on tungdv-Hadoop (executor 5) (63/80)
+26/10/05 12:07:29 INFO TaskSetManager: Starting task 43.0 in stage 1.0 (TID 163) (tungdv-Hadoop, executor 5, partition 43, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:07:29 INFO TaskSetManager: Finished task 39.0 in stage 1.0 (TID 159) in 70277 ms on tungdv-Hadoop (executor 5) (64/80)
+26/10/05 12:07:39 INFO BlockManagerInfo: Added rdd_2_40 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2.1 GiB)
+26/10/05 12:07:39 INFO BlockManagerInfo: Added rdd_2_41 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 2043.2 MiB)
+26/10/05 12:07:41 INFO BlockManagerInfo: Added rdd_2_42 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1958.3 MiB)
+26/10/05 12:07:41 INFO BlockManagerInfo: Added rdd_2_43 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1873.5 MiB)
+26/10/05 12:08:37 INFO TaskSetManager: Starting task 44.0 in stage 1.0 (TID 164) (tungdv-Hadoop, executor 5, partition 44, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:08:37 INFO TaskSetManager: Finished task 40.0 in stage 1.0 (TID 160) in 70326 ms on tungdv-Hadoop (executor 5) (65/80)
+26/10/05 12:08:38 INFO TaskSetManager: Starting task 45.0 in stage 1.0 (TID 165) (tungdv-Hadoop, executor 5, partition 45, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:08:38 INFO TaskSetManager: Finished task 42.0 in stage 1.0 (TID 162) in 68870 ms on tungdv-Hadoop (executor 5) (66/80)
+26/10/05 12:08:38 INFO TaskSetManager: Starting task 46.0 in stage 1.0 (TID 166) (tungdv-Hadoop, executor 5, partition 46, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:08:38 INFO TaskSetManager: Finished task 41.0 in stage 1.0 (TID 161) in 70706 ms on tungdv-Hadoop (executor 5) (67/80)
+26/10/05 12:08:40 INFO TaskSetManager: Starting task 47.0 in stage 1.0 (TID 167) (tungdv-Hadoop, executor 5, partition 47, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:08:40 INFO TaskSetManager: Finished task 43.0 in stage 1.0 (TID 163) in 70802 ms on tungdv-Hadoop (executor 5) (68/80)
+26/10/05 12:08:49 INFO BlockManagerInfo: Added rdd_2_44 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1788.6 MiB)
+26/10/05 12:08:50 INFO BlockManagerInfo: Added rdd_2_45 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1703.7 MiB)
+26/10/05 12:08:50 INFO BlockManagerInfo: Added rdd_2_46 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1618.9 MiB)
+26/10/05 12:08:52 INFO BlockManagerInfo: Added rdd_2_47 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1534.0 MiB)
+26/10/05 12:09:46 INFO TaskSetManager: Starting task 48.0 in stage 1.0 (TID 168) (tungdv-Hadoop, executor 5, partition 48, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:09:46 INFO TaskSetManager: Finished task 45.0 in stage 1.0 (TID 165) in 68436 ms on tungdv-Hadoop (executor 5) (69/80)
+26/10/05 12:09:47 INFO TaskSetManager: Starting task 49.0 in stage 1.0 (TID 169) (tungdv-Hadoop, executor 5, partition 49, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:09:47 INFO TaskSetManager: Finished task 44.0 in stage 1.0 (TID 164) in 70401 ms on tungdv-Hadoop (executor 5) (70/80)
+26/10/05 12:09:48 INFO TaskSetManager: Starting task 50.0 in stage 1.0 (TID 170) (tungdv-Hadoop, executor 5, partition 50, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:09:48 INFO TaskSetManager: Finished task 46.0 in stage 1.0 (TID 166) in 70353 ms on tungdv-Hadoop (executor 5) (71/80)
+26/10/05 12:09:51 INFO TaskSetManager: Starting task 51.0 in stage 1.0 (TID 171) (tungdv-Hadoop, executor 5, partition 51, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:09:51 INFO TaskSetManager: Finished task 47.0 in stage 1.0 (TID 167) in 70828 ms on tungdv-Hadoop (executor 5) (72/80)
+26/10/05 12:09:58 INFO BlockManagerInfo: Added rdd_2_48 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1449.1 MiB)
+26/10/05 12:10:00 INFO BlockManagerInfo: Added rdd_2_49 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1364.2 MiB)
+26/10/05 12:10:00 INFO BlockManagerInfo: Added rdd_2_50 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1279.4 MiB)
+26/10/05 12:10:03 INFO BlockManagerInfo: Added rdd_2_51 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1194.5 MiB)
+26/10/05 12:10:55 INFO TaskSetManager: Starting task 52.0 in stage 1.0 (TID 172) (tungdv-Hadoop, executor 5, partition 52, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:10:55 INFO TaskSetManager: Finished task 48.0 in stage 1.0 (TID 168) in 69054 ms on tungdv-Hadoop (executor 5) (73/80)
+26/10/05 12:10:58 INFO TaskSetManager: Starting task 53.0 in stage 1.0 (TID 173) (tungdv-Hadoop, executor 5, partition 53, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:10:58 INFO TaskSetManager: Finished task 49.0 in stage 1.0 (TID 169) in 70366 ms on tungdv-Hadoop (executor 5) (74/80)
+26/10/05 12:10:58 INFO TaskSetManager: Starting task 54.0 in stage 1.0 (TID 174) (tungdv-Hadoop, executor 5, partition 54, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:10:58 INFO TaskSetManager: Finished task 50.0 in stage 1.0 (TID 170) in 69706 ms on tungdv-Hadoop (executor 5) (75/80)
+26/10/05 12:11:00 INFO TaskSetManager: Starting task 55.0 in stage 1.0 (TID 175) (tungdv-Hadoop, executor 5, partition 55, NODE_LOCAL, 9087 bytes) 
+26/10/05 12:11:00 INFO TaskSetManager: Finished task 51.0 in stage 1.0 (TID 171) in 69766 ms on tungdv-Hadoop (executor 5) (76/80)
+26/10/05 12:11:07 INFO BlockManagerInfo: Added rdd_2_52 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1109.6 MiB)
+26/10/05 12:11:10 INFO BlockManagerInfo: Added rdd_2_53 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 1024.7 MiB)
+26/10/05 12:11:10 INFO BlockManagerInfo: Added rdd_2_54 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 939.9 MiB)
+26/10/05 12:11:13 INFO BlockManagerInfo: Added rdd_2_55 in memory on tungdv-Hadoop:44629 (size: 84.9 MiB, free: 855.0 MiB)
+26/10/05 12:12:05 INFO TaskSetManager: Finished task 52.0 in stage 1.0 (TID 172) in 70235 ms on tungdv-Hadoop (executor 5) (77/80)
+26/10/05 12:12:07 INFO TaskSetManager: Finished task 54.0 in stage 1.0 (TID 174) in 68873 ms on tungdv-Hadoop (executor 5) (78/80)
+26/10/05 12:12:09 INFO TaskSetManager: Finished task 53.0 in stage 1.0 (TID 173) in 71351 ms on tungdv-Hadoop (executor 5) (79/80)
+26/10/05 12:12:10 INFO TaskSetManager: Finished task 55.0 in stage 1.0 (TID 175) in 69794 ms on tungdv-Hadoop (executor 5) (80/80)
+26/10/05 12:12:10 INFO YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+26/10/05 12:12:10 INFO DAGScheduler: ResultStage 1 (count at /home/hdoop/test-2/prime_spark.py:55) finished in 1371.788 s
+26/10/05 12:12:10 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/05 12:12:10 INFO YarnScheduler: Killing all running tasks in stage 1: Stage finished
+26/10/05 12:12:10 INFO DAGScheduler: Job 1 finished: count at /home/hdoop/test-2/prime_spark.py:55, took 1371.806692 s
+==================================================
+Tổng số:            1558659920
+Số nguyên tố:       122357036
+Số không nguyên tố: 1436302884
+==================================================
+26/10/05 12:12:10 INFO SparkContext: SparkContext is stopping with exitCode 0.
+26/10/05 12:12:10 INFO SparkUI: Stopped Spark web UI at http://192.168.10.53:4040
+26/10/05 12:12:10 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+26/10/05 12:12:10 INFO YarnClientSchedulerBackend: Shutting down all executors
+26/10/05 12:12:10 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+26/10/05 12:12:10 INFO YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+26/10/05 12:12:10 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/10/05 12:12:10 INFO MemoryStore: MemoryStore cleared
+26/10/05 12:12:10 INFO BlockManager: BlockManager stopped
+26/10/05 12:12:10 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/10/05 12:12:10 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/10/05 12:12:10 INFO SparkContext: Successfully stopped SparkContext
+26/10/05 12:12:11 INFO ShutdownHookManager: Shutdown hook called
+26/10/05 12:12:11 INFO ShutdownHookManager: Deleting directory /tmp/spark-e55f8eae-54a7-42b6-8678-7642974ede89
+26/10/05 12:12:11 INFO ShutdownHookManager: Deleting directory /tmp/spark-eb61a2a4-0e8a-4349-881a-12faf4a6b47c
+26/10/05 12:12:11 INFO ShutdownHookManager: Deleting directory /tmp/spark-eb61a2a4-0e8a-4349-881a-12faf4a6b47c/pyspark-875b61e7-8697-4a4e-8c53-4be8802662f8

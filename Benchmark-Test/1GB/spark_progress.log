@@ -1,0 +1,219 @@
+26/10/05 09:47:17 WARN Utils: Your hostname, tungdv-Hadoop resolves to a loopback address: 127.0.1.1; using 192.168.10.53 instead (on interface eth0)
+26/10/05 09:47:17 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/05 09:47:19 INFO SparkContext: Running Spark version 3.5.9
+26/10/05 09:47:19 INFO SparkContext: OS info Linux, 6.8.0-136-generic, amd64
+26/10/05 09:47:19 INFO SparkContext: Java version 11.0.32.1
+26/10/05 09:47:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/05 09:47:19 INFO ResourceUtils: ==============================================================
+26/10/05 09:47:19 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/05 09:47:19 INFO ResourceUtils: ==============================================================
+26/10/05 09:47:19 INFO SparkContext: Submitted application: PrimeCounter
+26/10/05 09:47:19 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 1024, script: , vendor: , cores -> name: cores, amount: 4, script: , vendor: , memory -> name: memory, amount: 5120, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/05 09:47:19 INFO ResourceProfile: Limiting resource is cpus at 4 tasks per executor
+26/10/05 09:47:19 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/05 09:47:19 INFO SecurityManager: Changing view acls to: hdoop
+26/10/05 09:47:19 INFO SecurityManager: Changing modify acls to: hdoop
+26/10/05 09:47:19 INFO SecurityManager: Changing view acls groups to: 
+26/10/05 09:47:19 INFO SecurityManager: Changing modify acls groups to: 
+26/10/05 09:47:19 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: hdoop; groups with view permissions: EMPTY; users with modify permissions: hdoop; groups with modify permissions: EMPTY
+26/10/05 09:47:20 INFO Utils: Successfully started service 'sparkDriver' on port 32861.
+26/10/05 09:47:20 INFO SparkEnv: Registering MapOutputTracker
+26/10/05 09:47:20 INFO SparkEnv: Registering BlockManagerMaster
+26/10/05 09:47:20 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/05 09:47:20 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/05 09:47:20 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/05 09:47:20 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-d1c59ca2-4f47-4745-a64f-5cc407a7a727
+26/10/05 09:47:20 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/10/05 09:47:20 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/05 09:47:20 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/05 09:47:20 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/05 09:47:21 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+26/10/05 09:47:22 INFO Configuration: resource-types.xml not found
+26/10/05 09:47:22 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+26/10/05 09:47:22 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+26/10/05 09:47:22 INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+26/10/05 09:47:22 INFO Client: Setting up container launch context for our AM
+26/10/05 09:47:22 INFO Client: Setting up the launch environment for our AM container
+26/10/05 09:47:22 INFO Client: Preparing resources for our AM container
+26/10/05 09:47:22 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+26/10/05 09:47:28 INFO Client: Uploading resource file:/tmp/spark-88afdd80-082d-47ce-b8b1-fe4437222e4d/__spark_libs__2584496248772231906.zip -> hdfs://localhost:9000/user/hdoop/.sparkStaging/application_1791165466837_0006/__spark_libs__2584496248772231906.zip
+26/10/05 09:47:30 INFO Client: Uploading resource file:/home/hdoop/spark-3.5.9-bin-hadoop3/python/lib/pyspark.zip -> hdfs://localhost:9000/user/hdoop/.sparkStaging/application_1791165466837_0006/pyspark.zip
+26/10/05 09:47:30 INFO Client: Uploading resource file:/home/hdoop/spark-3.5.9-bin-hadoop3/python/lib/py4j-0.10.9.7-src.zip -> hdfs://localhost:9000/user/hdoop/.sparkStaging/application_1791165466837_0006/py4j-0.10.9.7-src.zip
+26/10/05 09:47:30 INFO Client: Uploading resource file:/tmp/spark-88afdd80-082d-47ce-b8b1-fe4437222e4d/__spark_conf__13329172274274683593.zip -> hdfs://localhost:9000/user/hdoop/.sparkStaging/application_1791165466837_0006/__spark_conf__.zip
+26/10/05 09:47:30 INFO SecurityManager: Changing view acls to: hdoop
+26/10/05 09:47:30 INFO SecurityManager: Changing modify acls to: hdoop
+26/10/05 09:47:30 INFO SecurityManager: Changing view acls groups to: 
+26/10/05 09:47:30 INFO SecurityManager: Changing modify acls groups to: 
+26/10/05 09:47:30 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: hdoop; groups with view permissions: EMPTY; users with modify permissions: hdoop; groups with modify permissions: EMPTY
+26/10/05 09:47:30 INFO Client: Submitting application application_1791165466837_0006 to ResourceManager
+26/10/05 09:47:31 INFO YarnClientImpl: Submitted application application_1791165466837_0006
+26/10/05 09:47:32 INFO Client: Application report for application_1791165466837_0006 (state: ACCEPTED)
+26/10/05 09:47:32 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1791168450986
+	 final status: UNDEFINED
+	 tracking URL: http://tungdv-Hadoop:8088/proxy/application_1791165466837_0006/
+	 user: hdoop
+26/10/05 09:47:44 INFO Client: Application report for application_1791165466837_0006 (state: RUNNING)
+26/10/05 09:47:44 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.10.53
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1791168450986
+	 final status: UNDEFINED
+	 tracking URL: http://tungdv-Hadoop:8088/proxy/application_1791165466837_0006/
+	 user: hdoop
+26/10/05 09:47:44 INFO YarnClientSchedulerBackend: Application application_1791165466837_0006 has started running.
+26/10/05 09:47:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33279.
+26/10/05 09:47:44 INFO NettyBlockTransferService: Server created on 192.168.10.53:33279
+26/10/05 09:47:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/05 09:47:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.10.53, 33279, None)
+26/10/05 09:47:44 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.10.53:33279 with 1048.8 MiB RAM, BlockManagerId(driver, 192.168.10.53, 33279, None)
+26/10/05 09:47:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.10.53, 33279, None)
+26/10/05 09:47:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.10.53, 33279, None)
+26/10/05 09:47:44 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> tungdv-Hadoop, PROXY_URI_BASES -> http://tungdv-Hadoop:8088/proxy/application_1791165466837_0006), /proxy/application_1791165466837_0006
+26/10/05 09:47:44 INFO SingleEventLogFileWriter: Logging events to hdfs://localhost:9000/spark-logs/application_1791165466837_0006.inprogress
+26/10/05 09:47:44 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /jobs: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /jobs/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /jobs/job: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /stages: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /stages/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /stages/stage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /stages/pool: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /storage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /storage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /environment: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /environment/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /executors: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /executors/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /executors/heapHistogram: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /executors/heapHistogram/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /static: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /api: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:44 INFO ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/05 09:47:50 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000000000(ns)
+Đang đọc input: /user/hdoop/prime/input/numbers_1gb.txt
+26/10/05 09:47:51 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 308.4 KiB, free 1048.5 MiB)
+26/10/05 09:47:51 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 52.5 KiB, free 1048.4 MiB)
+26/10/05 09:47:51 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.10.53:33279 (size: 52.5 KiB, free: 1048.7 MiB)
+26/10/05 09:47:51 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+26/10/05 09:47:52 INFO FileInputFormat: Total input files to process : 1
+26/10/05 09:47:52 INFO NetworkTopology: Adding a new node: /default-rack/127.0.0.1:9866
+26/10/05 09:47:52 INFO SparkContext: Starting job: count at /home/hdoop/test-2/prime_spark.py:54
+26/10/05 09:47:52 INFO DAGScheduler: Got job 0 (count at /home/hdoop/test-2/prime_spark.py:54) with 8 output partitions
+26/10/05 09:47:52 INFO DAGScheduler: Final stage: ResultStage 0 (count at /home/hdoop/test-2/prime_spark.py:54)
+26/10/05 09:47:52 INFO DAGScheduler: Parents of final stage: List()
+26/10/05 09:47:52 INFO DAGScheduler: Missing parents: List()
+26/10/05 09:47:52 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[3] at count at /home/hdoop/test-2/prime_spark.py:54), which has no missing parents
+26/10/05 09:47:52 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KiB, free 1048.4 MiB)
+26/10/05 09:47:52 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.4 KiB, free 1048.4 MiB)
+26/10/05 09:47:52 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.10.53:33279 (size: 6.4 KiB, free: 1048.7 MiB)
+26/10/05 09:47:52 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1611
+26/10/05 09:47:52 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 0 (PythonRDD[3] at count at /home/hdoop/test-2/prime_spark.py:54) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+26/10/05 09:47:52 INFO YarnScheduler: Adding task set 0.0 with 8 tasks resource profile 0
+26/10/05 09:47:52 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.10.53:55598) with ID 1,  ResourceProfileId 0
+26/10/05 09:47:52 INFO BlockManagerMasterEndpoint: Registering block manager tungdv-Hadoop:41125 with 2.8 GiB RAM, BlockManagerId(1, tungdv-Hadoop, 41125, None)
+26/10/05 09:47:52 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (tungdv-Hadoop, executor 1, partition 0, NODE_LOCAL, 9086 bytes) 
+26/10/05 09:47:52 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (tungdv-Hadoop, executor 1, partition 1, NODE_LOCAL, 9086 bytes) 
+26/10/05 09:47:52 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (tungdv-Hadoop, executor 1, partition 2, NODE_LOCAL, 9086 bytes) 
+26/10/05 09:47:52 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (tungdv-Hadoop, executor 1, partition 3, NODE_LOCAL, 9086 bytes) 
+26/10/05 09:47:53 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on tungdv-Hadoop:41125 (size: 6.4 KiB, free: 2.8 GiB)
+26/10/05 09:47:53 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on tungdv-Hadoop:41125 (size: 52.5 KiB, free: 2.8 GiB)
+26/10/05 09:48:08 INFO BlockManagerInfo: Added rdd_2_1 in memory on tungdv-Hadoop:41125 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 09:48:08 INFO BlockManagerInfo: Added rdd_2_3 in memory on tungdv-Hadoop:41125 (size: 84.9 MiB, free: 2.7 GiB)
+26/10/05 09:48:08 INFO BlockManagerInfo: Added rdd_2_0 in memory on tungdv-Hadoop:41125 (size: 84.9 MiB, free: 2.6 GiB)
+26/10/05 09:48:08 INFO BlockManagerInfo: Added rdd_2_2 in memory on tungdv-Hadoop:41125 (size: 84.9 MiB, free: 2.5 GiB)
+26/10/05 09:48:10 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (tungdv-Hadoop, executor 1, partition 4, NODE_LOCAL, 9086 bytes) 
+26/10/05 09:48:10 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 18033 ms on tungdv-Hadoop (executor 1) (1/8)
+26/10/05 09:48:10 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 37701
+26/10/05 09:48:10 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (tungdv-Hadoop, executor 1, partition 5, NODE_LOCAL, 9086 bytes) 
+26/10/05 09:48:10 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 18072 ms on tungdv-Hadoop (executor 1) (2/8)
+26/10/05 09:48:11 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (tungdv-Hadoop, executor 1, partition 6, NODE_LOCAL, 9086 bytes) 
+26/10/05 09:48:11 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 18366 ms on tungdv-Hadoop (executor 1) (3/8)
+26/10/05 09:48:11 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 18541 ms on tungdv-Hadoop (executor 1) (4/8)
+26/10/05 09:48:15 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (tungdv-Hadoop, executor 1, partition 7, RACK_LOCAL, 9086 bytes) 
+26/10/05 09:48:23 INFO BlockManagerInfo: Added rdd_2_5 in memory on tungdv-Hadoop:41125 (size: 84.9 MiB, free: 2.4 GiB)
+26/10/05 09:48:24 INFO BlockManagerInfo: Added rdd_2_6 in memory on tungdv-Hadoop:41125 (size: 84.9 MiB, free: 2.3 GiB)
+26/10/05 09:48:24 INFO BlockManagerInfo: Added rdd_2_4 in memory on tungdv-Hadoop:41125 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 09:48:26 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 15418 ms on tungdv-Hadoop (executor 1) (5/8)
+26/10/05 09:48:26 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 15314 ms on tungdv-Hadoop (executor 1) (6/8)
+26/10/05 09:48:26 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 15702 ms on tungdv-Hadoop (executor 1) (7/8)
+26/10/05 09:48:28 INFO BlockManagerInfo: Added rdd_2_7 in memory on tungdv-Hadoop:41125 (size: 84.9 MiB, free: 2.2 GiB)
+26/10/05 09:48:30 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 15246 ms on tungdv-Hadoop (executor 1) (8/8)
+26/10/05 09:48:30 INFO YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+26/10/05 09:48:30 INFO DAGScheduler: ResultStage 0 (count at /home/hdoop/test-2/prime_spark.py:54) finished in 37.975 s
+26/10/05 09:48:30 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/05 09:48:30 INFO YarnScheduler: Killing all running tasks in stage 0: Stage finished
+26/10/05 09:48:30 INFO DAGScheduler: Job 0 finished: count at /home/hdoop/test-2/prime_spark.py:54, took 38.117776 s
+26/10/05 09:48:30 INFO SparkContext: Starting job: count at /home/hdoop/test-2/prime_spark.py:55
+26/10/05 09:48:30 INFO DAGScheduler: Got job 1 (count at /home/hdoop/test-2/prime_spark.py:55) with 8 output partitions
+26/10/05 09:48:30 INFO DAGScheduler: Final stage: ResultStage 1 (count at /home/hdoop/test-2/prime_spark.py:55)
+26/10/05 09:48:30 INFO DAGScheduler: Parents of final stage: List()
+26/10/05 09:48:30 INFO DAGScheduler: Missing parents: List()
+26/10/05 09:48:30 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[4] at count at /home/hdoop/test-2/prime_spark.py:55), which has no missing parents
+26/10/05 09:48:30 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 12.6 KiB, free 1048.4 MiB)
+26/10/05 09:48:30 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 6.8 KiB, free 1048.4 MiB)
+26/10/05 09:48:30 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.10.53:33279 (size: 6.8 KiB, free: 1048.7 MiB)
+26/10/05 09:48:30 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1611
+26/10/05 09:48:30 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 1 (PythonRDD[4] at count at /home/hdoop/test-2/prime_spark.py:55) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+26/10/05 09:48:30 INFO YarnScheduler: Adding task set 1.0 with 8 tasks resource profile 0
+26/10/05 09:48:30 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 8) (tungdv-Hadoop, executor 1, partition 0, PROCESS_LOCAL, 9086 bytes) 
+26/10/05 09:48:30 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 9) (tungdv-Hadoop, executor 1, partition 1, PROCESS_LOCAL, 9086 bytes) 
+26/10/05 09:48:30 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 10) (tungdv-Hadoop, executor 1, partition 2, PROCESS_LOCAL, 9086 bytes) 
+26/10/05 09:48:30 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 11) (tungdv-Hadoop, executor 1, partition 3, PROCESS_LOCAL, 9086 bytes) 
+26/10/05 09:48:30 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on tungdv-Hadoop:41125 (size: 6.8 KiB, free: 2.2 GiB)
+26/10/05 09:49:29 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 12) (tungdv-Hadoop, executor 1, partition 4, PROCESS_LOCAL, 9086 bytes) 
+26/10/05 09:49:29 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 11) in 59040 ms on tungdv-Hadoop (executor 1) (1/8)
+26/10/05 09:49:29 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 13) (tungdv-Hadoop, executor 1, partition 5, PROCESS_LOCAL, 9086 bytes) 
+26/10/05 09:49:29 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 10) in 59042 ms on tungdv-Hadoop (executor 1) (2/8)
+26/10/05 09:49:29 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 14) (tungdv-Hadoop, executor 1, partition 6, PROCESS_LOCAL, 9086 bytes) 
+26/10/05 09:49:29 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 8) in 59619 ms on tungdv-Hadoop (executor 1) (3/8)
+26/10/05 09:49:31 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 15) (tungdv-Hadoop, executor 1, partition 7, PROCESS_LOCAL, 9086 bytes) 
+26/10/05 09:49:31 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 9) in 61431 ms on tungdv-Hadoop (executor 1) (4/8)
+26/10/05 09:50:27 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 13) in 58448 ms on tungdv-Hadoop (executor 1) (5/8)
+26/10/05 09:50:28 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 14) in 58292 ms on tungdv-Hadoop (executor 1) (6/8)
+26/10/05 09:50:28 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 12) in 59500 ms on tungdv-Hadoop (executor 1) (7/8)
+26/10/05 09:50:31 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 15) in 59912 ms on tungdv-Hadoop (executor 1) (8/8)
+26/10/05 09:50:31 INFO YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+26/10/05 09:50:31 INFO DAGScheduler: ResultStage 1 (count at /home/hdoop/test-2/prime_spark.py:55) finished in 121.362 s
+26/10/05 09:50:31 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+26/10/05 09:50:31 INFO YarnScheduler: Killing all running tasks in stage 1: Stage finished
+26/10/05 09:50:31 INFO DAGScheduler: Job 1 finished: count at /home/hdoop/test-2/prime_spark.py:55, took 121.372755 s
+==================================================
+Tổng số:            155866020
+Số nguyên tố:       12240116
+Số không nguyên tố: 143625904
+==================================================
+26/10/05 09:50:31 INFO SparkContext: SparkContext is stopping with exitCode 0.
+26/10/05 09:50:31 INFO SparkUI: Stopped Spark web UI at http://192.168.10.53:4040
+26/10/05 09:50:31 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+26/10/05 09:50:31 INFO YarnClientSchedulerBackend: Shutting down all executors
+26/10/05 09:50:31 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+26/10/05 09:50:31 INFO YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+26/10/05 09:50:31 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/10/05 09:50:31 INFO MemoryStore: MemoryStore cleared
+26/10/05 09:50:31 INFO BlockManager: BlockManager stopped
+26/10/05 09:50:31 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/10/05 09:50:31 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/10/05 09:50:31 INFO SparkContext: Successfully stopped SparkContext
+26/10/05 09:50:32 INFO ShutdownHookManager: Shutdown hook called
+26/10/05 09:50:32 INFO ShutdownHookManager: Deleting directory /tmp/spark-37488e30-fe40-43e1-b157-8184dfd77980
+26/10/05 09:50:32 INFO ShutdownHookManager: Deleting directory /tmp/spark-88afdd80-082d-47ce-b8b1-fe4437222e4d/pyspark-bd6affa2-e5bf-4866-9fa3-2b22616e2a67
+26/10/05 09:50:32 INFO ShutdownHookManager: Deleting directory /tmp/spark-88afdd80-082d-47ce-b8b1-fe4437222e4d
