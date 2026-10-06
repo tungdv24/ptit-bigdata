@@ -11,7 +11,9 @@
 
 set -u
 
-# ======================= THIẾT LẬP MÔI TRƯỜNG =======================
+# Luôn chuyển đến thư mục chứa script để các tham chiếu file con chạy chính xác
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
 export JAVA_HOME="${JAVA_HOME:-/usr/lib/jvm/java-11-openjdk-amd64}"
 export HADOOP_HOME="${HADOOP_HOME:-/home/hdoop/hadoop-3.3.6}"
 export SPARK_HOME="${SPARK_HOME:-/home/hdoop/spark-3.5.9-bin-hadoop3}"

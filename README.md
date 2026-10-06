@@ -320,3 +320,29 @@ Số không nguyên tố: 12
 | Phù hợp | Batch processing, ETL đơn giản | Phân tích tương tác, ML, streaming |
 
 Cả hai đều cho **cùng kết quả** (số lượng số nguyên tố giống nhau), xác nhận logic xử lý đúng ở cả hai nền tảng.
+
+---
+
+## Cấu trúc thư mục dự án
+
+```text
+.
+├── test/                       # Bộ công cụ thực nghiệm và benchmark tự động
+│   ├── run_overnight_benchmark.sh  # Kịch bản tự động hóa tuần tự 3 mốc (500MB, 1GB, 10GB)
+│   ├── mapper.py               # Map function cho Hadoop Streaming
+│   ├── reducer.py              # Reduce function cho Hadoop Streaming
+│   ├── prime_spark.py          # PySpark script đếm số nguyên tố trong RAM
+│   ├── generate_numbers.py     # Script sinh dữ liệu kiểm thử
+│   ├── format_mr_output.py     # Định dạng output của MapReduce
+│   ├── plot_monitor.py         # Vẽ dashboard so sánh tài nguyên & Disk I/O
+│   ├── plot_scalability.py     # Vẽ biểu đồ tổng hợp Scalability & Speedup
+│   └── README.md               # Hướng dẫn chi tiết chạy bộ test
+├── Benchmark-Test/             # Kết quả đo đạc thực nghiệm đã hoàn thành
+│   ├── 500MB/                  # Biểu đồ và logs mốc 500MB (Spark nhanh hơn 2.63x)
+│   ├── 1GB/                    # Biểu đồ và logs mốc 1GB (Spark nhanh hơn 3.10x)
+│   ├── 10GB/                   # Biểu đồ và logs mốc 10GB (Spark nhanh hơn 3.83x)
+│   ├── MASTER_REPORT.md        # Báo cáo tổng hợp đối chiếu số liệu
+│   └── scalability_chart.png   # Biểu đồ tăng tốc và thời gian thực thi
+└── setup_hadoop_spark.sh       # Kịch bản cài đặt và cấu hình cụm trên Ubuntu
+```
+
