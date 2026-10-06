@@ -8,7 +8,8 @@ Thư mục này chứa toàn bộ mã nguồn thực thi, kịch bản tự đ�
 
 | Tệp tin | Vai trò / Chức năng |
 | :--- | :--- |
-| `run_overnight_benchmark.sh` | **Kịch bản điều phối chính**: Tự động chạy tuần tự các bộ dữ liệu (`500MB` $\rightarrow$ `1GB` $\rightarrow$ `10GB`), tích hợp bộ monitor tài nguyên, thời gian nghỉ làm mát, và tự động xuất báo cáo tổng hợp. |
+| `run.sh` | **Kịch bản chạy nhanh theo tệp chỉ định**: Nhận tên tệp hoặc đường dẫn HDFS làm tham số (`bash run.sh <ten_file>`), tự động đo đạc, đối chiếu và xuất toàn bộ dashboard biểu đồ. |
+| `run_overnight_benchmark.sh` | **Kịch bản điều phối qua đêm**: Tự động chạy tuần tự cả 3 bộ dữ liệu (`500MB` $\rightarrow$ `1GB` $\rightarrow$ `10GB`), tích hợp monitor tài nguyên, thời gian nghỉ làm mát, và tự động xuất báo cáo tổng hợp. |
 | `mapper.py` | Tiến trình Map (Hadoop Streaming): Đọc từng dòng dữ liệu từ stdin, kiểm tra số nguyên tố $O(\sqrt{N})$ và xuất cặp `key-value`. |
 | `reducer.py` | Tiến trình Reduce (Hadoop Streaming): Tổng hợp số lượng số nguyên tố và số không nguyên tố. |
 | `prime_spark.py` | Ứng dụng Apache Spark (PySpark): Phân tán dữ liệu qua RDD / `mapPartitions` để đếm số nguyên tố song song trong RAM. |
@@ -21,21 +22,23 @@ Thư mục này chứa toàn bộ mã nguồn thực thi, kịch bản tự đ�
 
 ## 2. Cách khởi chạy Benchmark
 
-### Chạy toàn bộ 3 mốc dữ liệu (500MB -> 1GB -> 10GB):
+### Cách 1: Chạy kiểm thử cho 1 tệp tùy chọn bất kỳ với `run.sh` (Khuyên dùng)
 ```bash
-cd test
-./run_overnight_benchmark.sh
+# Truyền tên file trong /user/hdoop/prime/input/
+bash run.sh numbers_1gb.txt
+
+# Hoặc truyền đường dẫn tuyệt đối trên HDFS
+bash run.sh /user/hdoop/prime/input/my_custom_data.txt
 ```
 
-### Chạy kiểm thử cho 1 tệp dữ liệu duy nhất:
+### Cách 2: Chạy tự động tuần tự cả 3 mốc dữ liệu (500MB -> 1GB -> 10GB) qua đêm:
 ```bash
-cd test
-./run_overnight_benchmark.sh numbers_500mb.txt
+bash run_overnight_benchmark.sh
 ```
 
-> **Lưu ý**: Khuyến khích khởi chạy trong `tmux` hoặc `screen` trên máy chủ để tiến trình tiếp tục chạy ngầm khi ngắt kết nối SSH:
+> **Lưu ý**: Khuyến khích khởi chạy trong `tmux` trên máy chủ để tiến trình tiếp tục chạy ngầm khi ngắt kết nối SSH:
 > ```bash
 > tmux new -s benchmark
-> cd test && ./run_overnight_benchmark.sh
+> cd test && bash run.sh numbers_1gb.txt
 > # Nhấn Ctrl+B rồi nhấn D để detach
 > ```
